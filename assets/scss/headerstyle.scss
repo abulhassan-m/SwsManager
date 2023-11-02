@@ -1,0 +1,318 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 Jun, 2020, 1:47:36 PM
+    Author     : Muhammad Ansari
+*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body {    
+    font-family: 'Maiandra GD','Roboto', sans-serif;
+    background-color: #b22930;
+}
+h1 {    
+    color: #b22930;
+}
+a {
+    text-decoration: none;
+    color:#b22930;
+}
+#header {
+    width:100%;
+    position:fixed;
+    z-index:9999;
+    .navbar{
+        background-color: #ea5e51;
+        padding: 10px;
+        h1{
+            font-size: 28px;
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+        .icon {
+            display: none;
+        }
+    }
+}
+.container {
+    width: 100%;
+}
+.sidemenu {
+    top:53px;
+    overflow: hidden;
+    padding: 15px;
+    width: 12%;
+    height:auto;
+    float:left;
+    position:fixed;
+    .active {
+        background: indianred; 
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    li {
+        list-style: none;        
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            position: relative;
+            display: block;
+            padding: 10px 15px;
+            &:hover {
+                background-color: #ea5e51;
+            }
+        }
+    }
+}
+.text-white {
+    color:#fff;
+}
+.text-indianred {
+    color:indianred;
+}
+.text-b22930 {
+    color:#b22930;
+}
+.bg-white{
+    background-color: #fff;
+}
+.bg-dc3545 {
+    background-color: #dc3545;
+}
+.col-container {
+    position: relative;
+    padding: 0 20px;
+    border-left: 1px solid #e7e7e7;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    width: calc(100% - 17%);
+    float: right;
+    margin-top: 53px;
+}
+ul, ol {
+    margin: 0;
+    margin-bottom: 0px;
+
+}
+b, strong {
+    font-weight: 700;
+}
+.red-text{
+    color: red;
+}
+.padding-t-5 {
+    padding-top: 5px;
+}
+.column-full {
+    width: 100%;
+}
+.column-66 {
+    width: 60%;
+}
+.column-half {
+    width: 45%;
+}
+.column-33 {
+    width: 28.75%;
+}
+.column-quad {
+    width: 25%;
+}
+.column-16 {
+    width: 15%;
+}
+.column-16, .column-full, .column-66, .column-quad, .column-33, .column-half {
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.group {
+    position: relative;
+    margin-bottom: 0px;
+    /*margin-top: 14px;*/
+}
+
+.padding-5 {
+    padding: 5px;
+}
+.padding-r-10{
+    padding-right: 10px;
+}
+.padding-r-0{
+    padding-right: 0px;
+}
+#footer {
+    position: relative;
+    bottom: 0px;
+    border:#e7e7e7 solid 1px ;
+    padding: 5px;
+    width: 97%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:  center;
+    text-align: center;
+    font-size: 14px;
+    .copy {
+        width: 100%;
+        color: black;
+        a{
+            color: black;
+            text-decoration: none;
+        }
+    }
+    .footer-follow {
+        width: 100%;
+        ul {
+            display: flex;
+            justify-content: center;           
+            li{
+                list-style: none;
+                float: left;
+                padding: 5px 10px 5px 10px;
+                a{
+                    text-align: center;
+                    text-decoration: none;
+                    font-size: 18px;
+                    color:black;
+                    &:hover{
+                        color: indianred;
+                    }
+                }
+            }
+        }
+    }
+    .footer-copyright {        
+        color: black;
+    }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    #header {
+        .navbar{
+            .icon {
+                position: absolute;
+                left: 70%;
+                top: 18px;
+            }        
+            a.icon {
+                float: right;
+                display: block;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    .sidemenu {
+        display: none;
+    }
+    .sidemenu.responsive {
+        z-index: 1;
+        position: relative; 
+        background-color: #b22930;
+        display: block;
+        text-align: left;
+        width: 90%;
+    }
+    .col-container {
+        width: 81%;
+        left: 1%;
+    }
+    #footer{
+        padding:0 20px 0 20px;
+        font-size: 10px;
+        .footer-follow {
+            ul{
+                li{
+                    padding: 2px 5px 2px 5px;
+                    a{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    #header {
+        .navbar{
+            .icon {
+                position: absolute;
+                left: 78%;
+                top: 18px;
+            }        
+            a.icon {
+                float: right;
+                display: block;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    .sidemenu {
+        display: none;
+    }
+    .sidemenu.responsive {
+        z-index: 1;
+        position: relative; 
+        background-color: #b22930;
+        display: block;
+        text-align: left;
+        width: 90%;
+    }
+    .col-container {
+        width: 90.5%;
+        left: 1%;
+    }
+    #footer{
+        padding:0 20px 0 20px;
+        font-size: 10px;
+        .footer-follow {
+            ul{
+                li{
+                    padding: 2px 5px 2px 5px;
+                    a{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 901px) and (max-width: 1280px) {    
+    .sidemenu {
+        width: 18%;
+        padding: 10px;
+        
+    }
+    .col-container {
+        width: 74%;
+        left: 20%;
+    }
+    #footer{
+        padding:0 20px 0 20px;
+        font-size: 10px;
+        .footer-follow {
+            ul{
+                li{
+                    padding: 2px 5px 2px 5px;
+                    a{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

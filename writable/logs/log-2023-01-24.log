@@ -1,0 +1,421 @@
+INFO - 2023-01-24 15:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 15:28:09 --> The route for "/login" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/login')
+ 2 SYSTEMPATH\Common.php(869): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Home.php(34): redirect('/login')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 15:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 15:38:27 --> The route for "/login" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/login')
+ 2 SYSTEMPATH\Common.php(869): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Home.php(34): redirect('/login')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 16:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 16:26:40 --> The route for "/login" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/login')
+ 2 SYSTEMPATH\Common.php(869): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Home.php(34): redirect('/login')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 16:26:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 16:26:44 --> The route for "/login" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/login')
+ 2 SYSTEMPATH\Common.php(869): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Home.php(34): redirect('/login')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 16:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 16:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 16:29:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 16:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 16:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 16:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 16:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 16:31:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 16:31:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 16:31:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 16:31:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 16:31:36 --> Trying to get property 'id_user' of non-object
+in APPPATH\Controllers\Auth.php on line 143.
+ 1 APPPATH\Controllers\Auth.php(143): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_user\' of non-object', 'APPPATH\\Controllers\\Auth.php', 143, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 16:34:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 16:34:59 --> Trying to get property 'id_user' of non-object
+in APPPATH\Controllers\Auth.php on line 143.
+ 1 APPPATH\Controllers\Auth.php(143): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_user\' of non-object', 'APPPATH\\Controllers\\Auth.php', 143, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 16:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 16:35:18 --> Array to string conversion
+in APPPATH\Controllers\Auth.php on line 142.
+ 1 APPPATH\Controllers\Auth.php(142): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Controllers\\Auth.php', 142, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 16:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 16:36:55 --> Trying to get property 'id_user' of non-object
+in APPPATH\Controllers\Auth.php on line 144.
+ 1 APPPATH\Controllers\Auth.php(144): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_user\' of non-object', 'APPPATH\\Controllers\\Auth.php', 144, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 16:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 16:39:37 --> Trying to get property 'id_user' of non-object
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 APPPATH\Controllers\Auth.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_user\' of non-object', 'APPPATH\\Controllers\\Auth.php', 145, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 16:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 16:40:19 --> Trying to get property 'user_id' of non-object
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 APPPATH\Controllers\Auth.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'user_id\' of non-object', 'APPPATH\\Controllers\\Auth.php', 145, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 16:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 16:46:18 --> Undefined offset: 1
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 APPPATH\Controllers\Auth.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 1', 'APPPATH\\Controllers\\Auth.php', 145, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 16:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 16:46:35 --> Undefined offset: 0
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 APPPATH\Controllers\Auth.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offset: 0', 'APPPATH\\Controllers\\Auth.php', 145, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 16:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 16:47:01 --> Trying to get property 'session_data' of non-object
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 APPPATH\Controllers\Auth.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'session_data\' of non-object', 'APPPATH\\Controllers\\Auth.php', 145, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 16:49:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 16:49:45 --> Trying to get property 'user_id' of non-object
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 APPPATH\Controllers\Auth.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'user_id\' of non-object', 'APPPATH\\Controllers\\Auth.php', 145, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:00:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 17:00:57 --> Trying to get property 'user_id' of non-object
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 APPPATH\Controllers\Auth.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'user_id\' of non-object', 'APPPATH\\Controllers\\Auth.php', 145, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:01:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 17:01:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 17:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 17:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 17:01:29 --> Trying to get property 'user_id' of non-object
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 APPPATH\Controllers\Auth.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'user_id\' of non-object', 'APPPATH\\Controllers\\Auth.php', 145, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:03:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 17:03:10 --> Trying to get property 'user_id' of non-object
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 APPPATH\Controllers\Auth.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'user_id\' of non-object', 'APPPATH\\Controllers\\Auth.php', 145, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 17:03:13 --> Trying to get property 'user_id' of non-object
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 APPPATH\Controllers\Auth.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'user_id\' of non-object', 'APPPATH\\Controllers\\Auth.php', 145, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 17:03:26 --> Trying to get property 'user_id' of non-object
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 APPPATH\Controllers\Auth.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'user_id\' of non-object', 'APPPATH\\Controllers\\Auth.php', 145, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:08:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 17:08:25 --> Trying to get property 'user_id' of non-object
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 APPPATH\Controllers\Auth.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'user_id\' of non-object', 'APPPATH\\Controllers\\Auth.php', 145, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-24 17:08:51 --> syntax error, unexpected ']', expecting ')'
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Auth.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Auth')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Auth')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Auth')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Auth', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 17:09:13 --> Call to a member function user_id() on array
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:09:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 17:09:45 --> Trying to get property 'user_id' of non-object
+in APPPATH\Controllers\Auth.php on line 145.
+ 1 APPPATH\Controllers\Auth.php(145): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'user_id\' of non-object', 'APPPATH\\Controllers\\Auth.php', 145, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:10:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 17:10:17 --> Trying to get property 'user_id' of non-object
+in APPPATH\Controllers\Auth.php on line 146.
+ 1 APPPATH\Controllers\Auth.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'user_id\' of non-object', 'APPPATH\\Controllers\\Auth.php', 146, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 17:11:13 --> Trying to get property 'user_id' of non-object
+in APPPATH\Controllers\Auth.php on line 146.
+ 1 APPPATH\Controllers\Auth.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'user_id\' of non-object', 'APPPATH\\Controllers\\Auth.php', 146, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:11:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 17:11:43 --> Trying to get property 'session_data' of non-object
+in APPPATH\Controllers\Auth.php on line 146.
+ 1 APPPATH\Controllers\Auth.php(146): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'session_data\' of non-object', 'APPPATH\\Controllers\\Auth.php', 146, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:12:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 17:12:20 --> Call to a member function Logoutlogged() on null
+in APPPATH\Controllers\Auth.php on line 150.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:13:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 17:13:27 --> Call to a member function Logoutlogged() on null
+in APPPATH\Controllers\Auth.php on line 150.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:14:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 22:44:15 --> Trying to get property 'id_user' of non-object
+in APPPATH\Models\Auth_model.php on line 103.
+ 1 APPPATH\Models\Auth_model.php(103): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'id_user\' of non-object', 'APPPATH\\Models\\Auth_model.php', 103, [...])
+ 2 APPPATH\Controllers\Auth.php(151): App\Models\Auth_model->Logoutlogged([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->logout()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 17:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 17:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 17:15:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 17:15:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 17:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 17:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:26:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:26:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:33:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:37:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:37:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:37:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:37:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:37:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:40:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:40:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:41:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:41:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:41:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:42:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:44:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:44:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:57:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 18:57:41 --> Call to undefined function form_open()
+in APPPATH\Views\auth\forgot.php on line 6.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('auth/forgot', [], true)
+ 4 APPPATH\Controllers\Auth.php(177): view('auth/forgot')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->forgot()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 18:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 18:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 18:58:35 --> Call to undefined function form_open()
+in APPPATH\Views\auth\forgot.php on line 6.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('auth/forgot', [], true)
+ 4 APPPATH\Controllers\Auth.php(177): view('auth/forgot')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->forgot()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 18:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 18:59:14 --> Call to undefined function form_error()
+in APPPATH\Views\auth\forgot.php on line 30.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('auth/forgot', [], true)
+ 4 APPPATH\Controllers\Auth.php(177): view('auth/forgot')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->forgot()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 19:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 19:37:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 19:37:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 19:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-01-24 19:38:45 --> mysqli_sql_exception: Unknown column 'primary_email' in 'IN/ALL/ANY subquery' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Auth_model.php(180): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Auth.php(182): App\Models\Auth_model->getUserInfoByEmail('metrointech@gma...')
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Auth->forgot()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-24 19:38:45 --> Unknown column 'primary_email' in 'IN/ALL/ANY subquery'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_log`
+JOIN `employee` ON `employee`.`id` = `user_log`.`emp_id`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `map_ct_appln_email` ON `map_ct_appln_email`.`appln_id` = `employee`.`appln_id`
+JOIN `email` ON `email`.`id`=`map_ct_appln_email`.`email_id`
+WHERE `primary_email` IN (SELECT `id`
+FROM `email`
+WHERE `email` = \'metrointech@gmail.com\'
+AND `is_primary` = 1)', [], false)
+ 2 APPPATH\Models\Auth_model.php(180): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Auth.php(182): App\Models\Auth_model->getUserInfoByEmail('metrointech@gmail.com')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->forgot()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 19:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-01-24 19:40:03 --> mysqli_sql_exception: Unknown column 'map_ct_appln_email.email_id' in 'IN/ALL/ANY subquery' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Auth_model.php(179): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Auth.php(182): App\Models\Auth_model->getUserInfoByEmail('metrointech@gma...')
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Auth->forgot()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-24 19:40:03 --> Unknown column 'map_ct_appln_email.email_id' in 'IN/ALL/ANY subquery'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_log`
+JOIN `employee` ON `employee`.`id` = `user_log`.`emp_id`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `map_ct_appln_email` ON `map_ct_appln_email`.`appln_id` = `employee`.`appln_id`
+WHERE `map_ct_appln_email.email_id` IN (SELECT `id`
+FROM `email`
+WHERE `email` = \'metrointech@gmail.com\'
+AND `is_primary` = 1)', [], false)
+ 2 APPPATH\Models\Auth_model.php(179): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Auth.php(182): App\Models\Auth_model->getUserInfoByEmail('metrointech@gmail.com')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->forgot()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 19:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 19:43:02 --> Call to undefined method CodeIgniter\Session\Session::set_flashdata()
+in APPPATH\Controllers\Auth.php on line 185.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->forgot()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 19:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-24 19:43:39 --> The route for "http://localhost/manage-app/forgot" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('http://localhost/manage-app/forgot')
+ 2 SYSTEMPATH\Common.php(869): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Auth.php(186): redirect('http://localhost/manage-app/forgot')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth->forgot()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-24 19:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 19:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 19:45:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 19:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 19:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 19:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 19:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 19:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 19:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 19:59:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 21:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 21:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 21:38:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 21:38:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 21:39:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 21:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 21:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-24 21:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

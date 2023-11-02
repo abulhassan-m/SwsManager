@@ -1,0 +1,776 @@
+ERROR - 2023-01-22 02:04:21 --> mysqli_sql_exception: Table 'db_sec_app.tbl_bill_pay' doesn't exist in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Bill_model.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Bill.php(43): App\Controllers\Bill_model->billdetails()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Bill->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bill))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 02:04:21 --> Table 'db_sec_app.tbl_bill_pay' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_bill`
+JOIN `tbl_bill_pay` ON `tbl_bill_pay`.`bill_id`=`tbl_bill`.`id`
+WHERE Month(tbl_bill.created) = :Month(tbl_bill.created):', [...], false)
+ 2 APPPATH\Models\Bill_model.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Bill.php(43): App\Controllers\Bill_model->billdetails()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Bill->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bill))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 02:04:51 --> mysqli_sql_exception: Unknown column 'tbl_bill.created' in 'where clause' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Bill_model.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Bill.php(43): App\Controllers\Bill_model->billdetails()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Bill->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bill))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 02:04:51 --> Unknown column 'tbl_bill.created' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_bill`
+JOIN `unit_bill_breakup` ON `tbl_bill_pay`.`bill_id`=`tbl_bill`.`id`
+WHERE Month(tbl_bill.created) = :Month(tbl_bill.created):', [...], false)
+ 2 APPPATH\Models\Bill_model.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Bill.php(43): App\Controllers\Bill_model->billdetails()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Bill->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bill))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 02:05:15 --> mysqli_sql_exception: Unknown column 'tbl_bill_pay.bill_id' in 'on clause' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Bill_model.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Bill.php(43): App\Controllers\Bill_model->billdetails()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Bill->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bill))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 02:05:15 --> Unknown column 'tbl_bill_pay.bill_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `unit_bill`
+JOIN `unit_bill_breakup` ON `tbl_bill_pay`.`bill_id`=`tbl_bill`.`id`
+WHERE Month(unit_bill.created_at) = :Month(unit_bill.created_at):', [...], false)
+ 2 APPPATH\Models\Bill_model.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Bill.php(43): App\Controllers\Bill_model->billdetails()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Bill->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bill))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 02:07:13 --> mysqli_sql_exception: Table 'db_sec_app.tbl_voucher' doesn't exist in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `date`\nF...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `date`\nF...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `date`\nF...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `date`\nF...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Models\transaction_model.php(44): App\Models\Transaction_model->getlastid('date', 'tbl_voucher', 'asc')
+#6 C:\wamp64\www\manage-app\app\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#9 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-22 02:07:13 --> Table 'db_sec_app.tbl_voucher' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `date`
+FROM `tbl_voucher`
+ORDER BY `date` ASC
+ LIMIT 1', [], false)
+ 2 APPPATH\Models\transaction_model.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\transaction_model.php(44): App\Models\Transaction_model->getlastid('date', 'tbl_voucher', 'asc')
+ 4 APPPATH\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 02:12:22 --> mysqli_sql_exception: Table 'db_sec_app.tbl_voucher' doesn't exist in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `date`\nF...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `date`\nF...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `date`\nF...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `date`\nF...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Models\transaction_model.php(40): App\Models\Transaction_model->getlastid('date', 'tbl_voucher', 'asc')
+#6 C:\wamp64\www\manage-app\app\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#9 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-22 02:12:22 --> Table 'db_sec_app.tbl_voucher' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `date`
+FROM `tbl_voucher`
+ORDER BY `date` ASC
+ LIMIT 1', [], false)
+ 2 APPPATH\Models\transaction_model.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\transaction_model.php(40): App\Models\Transaction_model->getlastid('date', 'tbl_voucher', 'asc')
+ 4 APPPATH\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 03:35:43 --> mysqli_sql_exception: Table 'db_sec_app.tbl_voucher' doesn't exist in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `date`\nF...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `date`\nF...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `date`\nF...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `date`\nF...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Models\transaction_model.php(40): App\Models\Transaction_model->getlastid('date', 'tbl_voucher', 'asc')
+#6 C:\wamp64\www\manage-app\app\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#9 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-22 03:35:43 --> Table 'db_sec_app.tbl_voucher' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `date`
+FROM `tbl_voucher`
+ORDER BY `date` ASC
+ LIMIT 1', [], false)
+ 2 APPPATH\Models\transaction_model.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\transaction_model.php(40): App\Models\Transaction_model->getlastid('date', 'tbl_voucher', 'asc')
+ 4 APPPATH\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 03:36:08 --> mysqli_sql_exception: Table 'db_sec_app.tbl_voucher' doesn't exist in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `date`\nF...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `date`\nF...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `date`\nF...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `date`\nF...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Models\transaction_model.php(40): App\Models\Transaction_model->getlastid('date', 'tbl_voucher', 'asc')
+#6 C:\wamp64\www\manage-app\app\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#9 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-22 03:36:08 --> Table 'db_sec_app.tbl_voucher' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `date`
+FROM `tbl_voucher`
+ORDER BY `date` ASC
+ LIMIT 1', [], false)
+ 2 APPPATH\Models\transaction_model.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\transaction_model.php(40): App\Models\Transaction_model->getlastid('date', 'tbl_voucher', 'asc')
+ 4 APPPATH\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 03:55:18 --> mysqli_sql_exception: Unknown column 'date' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `date`\nF...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `date`\nF...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `date`\nF...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `date`\nF...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(27): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Models\transaction_model.php(40): App\Models\Transaction_model->getlastid('date', 'voucher', 'asc')
+#6 C:\wamp64\www\manage-app\app\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#9 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-22 03:55:18 --> Unknown column 'date' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `date`
+FROM `voucher`
+ORDER BY `date` ASC
+ LIMIT 1', [], false)
+ 2 APPPATH\Models\transaction_model.php(27): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\transaction_model.php(40): App\Models\Transaction_model->getlastid('date', 'voucher', 'asc')
+ 4 APPPATH\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 03:57:41 --> mysqli_sql_exception: Unknown column 'date' in 'where clause' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`amo...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`amo...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`amo...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`amo...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Models\transaction_model.php(41): App\Models\Transaction_model->vouchers('amount', '0000-00-00', '2023-01-21 03:5...', 'Receipt')
+#6 C:\wamp64\www\manage-app\app\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#9 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-22 03:57:41 --> Unknown column 'date' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`amount`) AS `amount`
+FROM `voucher`
+WHERE `date` >= :date:
+AND `date` <= :date.1:
+AND `type_id` = :type_id :', [...], false)
+ 2 APPPATH\Models\transaction_model.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\transaction_model.php(41): App\Models\Transaction_model->vouchers('amount', '0000-00-00', '2023-01-21 03:57:41', 'Receipt')
+ 4 APPPATH\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 03:58:18 --> mysqli_sql_exception: Unknown column 'type_id' in 'where clause' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`amo...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`amo...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`amo...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`amo...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Models\transaction_model.php(41): App\Models\Transaction_model->vouchers('amount', '0000-00-00', '2023-01-21 03:5...', 'Receipt')
+#6 C:\wamp64\www\manage-app\app\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#9 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-01-22 03:58:18 --> Unknown column 'type_id' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`amount`) AS `amount`
+FROM `voucher`
+WHERE `vouch_date` >= :vouch_date:
+AND `vouch_date` <= :vouch_date.1:
+AND `type_id` = :type_id :', [...], false)
+ 2 APPPATH\Models\transaction_model.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\transaction_model.php(41): App\Models\Transaction_model->vouchers('amount', '0000-00-00', '2023-01-21 03:58:18', 'Receipt')
+ 4 APPPATH\Controllers\transaction.php(47): App\Models\Transaction_model->acc_open_balance()
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 03:59:32 --> mysqli_sql_exception: Unknown column 'date' in 'where clause' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`amo...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`amo...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`amo...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`amo...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(48): App\Models\Transaction_model->get_total_receipts()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 03:59:32 --> Unknown column 'date' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`amount`) AS `amount`
+FROM `receipts`
+WHERE `date` = :date :', [...], false)
+ 2 APPPATH\Models\transaction_model.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(48): App\Models\Transaction_model->get_total_receipts()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 04:00:40 --> mysqli_sql_exception: Unknown column 'date' in 'where clause' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT SUM(`amo...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT SUM(`amo...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT SUM(`amo...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`amo...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(64): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(49): App\Models\Transaction_model->get_total_vouchers()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 04:00:40 --> Unknown column 'date' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT SUM(`amount`) AS `amount`
+FROM `voucher`
+WHERE `date` = :date :', [...], false)
+ 2 APPPATH\Models\transaction_model.php(64): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(49): App\Models\Transaction_model->get_total_vouchers()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 04:01:12 --> mysqli_sql_exception: Unknown column 'date' in 'where clause' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(97): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(51): App\Models\Transaction_model->get_receipts()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 04:01:12 --> Unknown column 'date' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `receipts`
+WHERE `date` = :date :', [...], false)
+ 2 APPPATH\Models\transaction_model.php(97): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(51): App\Models\Transaction_model->get_receipts()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 04:01:37 --> mysqli_sql_exception: Unknown column 'date' in 'where clause' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(121): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(52): App\Models\Transaction_model->get_vouchers()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 04:01:37 --> Unknown column 'date' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `voucher`
+WHERE `date` = :date :', [...], false)
+ 2 APPPATH\Models\transaction_model.php(121): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(52): App\Models\Transaction_model->get_vouchers()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 04:02:07 --> mysqli_sql_exception: Table 'db_sec_app.tbl_emp' doesn't exist in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 04:02:07 --> Table 'db_sec_app.tbl_emp' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (SELECT `empid`, IFNULL( SUM( CASE WHEN TYPE = "Added" AND DATE(t.created) = 2023-01-22 THEN amount END), 0) AS "ADDED TOTAL", IFNULL(SUM( CASE WHEN TYPE = "Deduction" AND DATE(t.created) = 2023-01-22 THEN amount END), 0) AS "DEDUCTED TOTAL", ( IFNULL(SUM( CASE WHEN TYPE = "Added" AND DATE(t.created) <= 2023-01-21 THEN amount END), 0) - IFNULL(SUM( CASE WHEN TYPE = "Deduction" AND DATE(t.created) <= 2023-01-21 THEN amount END), 0)) AS "OPENING BAL", ( IFNULL(SUM( CASE WHEN TYPE = "Added" THEN amount END), 0) - IFNULL(SUM( CASE WHEN TYPE = "Deduction"
+                                 THEN amount END), 0)) AS CLOSINGBAL, `firstname`, `lastname`, `photo`
+FROM `map_emp_suspense` as `t`
+JOIN `tbl_emp` ON `tbl_emp`.`id` = `t`.`empid`
+GROUP BY `t`.`empid`) as y
+WHERE CLOSINGBAL > 0 
+GROUP BY `empid`', [], false)
+ 2 APPPATH\Models\transaction_model.php(154): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 04:02:59 --> mysqli_sql_exception: Unknown column 'empid' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 04:02:59 --> Unknown column 'empid' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (SELECT `empid`, IFNULL( SUM( CASE WHEN TYPE = "Added" AND DATE(t.created) = 2023-01-22 THEN amount END), 0) AS "ADDED TOTAL", IFNULL(SUM( CASE WHEN TYPE = "Deduction" AND DATE(t.created) = 2023-01-22 THEN amount END), 0) AS "DEDUCTED TOTAL", ( IFNULL(SUM( CASE WHEN TYPE = "Added" AND DATE(t.created) <= 2023-01-21 THEN amount END), 0) - IFNULL(SUM( CASE WHEN TYPE = "Deduction" AND DATE(t.created) <= 2023-01-21 THEN amount END), 0)) AS "OPENING BAL", ( IFNULL(SUM( CASE WHEN TYPE = "Added" THEN amount END), 0) - IFNULL(SUM( CASE WHEN TYPE = "Deduction"
+                                 THEN amount END), 0)) AS CLOSINGBAL, `firstname`, `lastname`, `photo`
+FROM `map_emp_suspense` as `t`
+JOIN `employee` ON `employee`.`id` = `t`.`empid`
+GROUP BY `t`.`empid`) as y
+WHERE CLOSINGBAL > 0 
+GROUP BY `empid`', [], false)
+ 2 APPPATH\Models\transaction_model.php(154): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 04:03:31 --> mysqli_sql_exception: Unknown column 'empid' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 04:03:31 --> Unknown column 'empid' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (SELECT `empid`, IFNULL( SUM( CASE WHEN TYPE = "Added" AND DATE(t.created) = 2023-01-22 THEN amount END), 0) AS "ADDED TOTAL", IFNULL(SUM( CASE WHEN TYPE = "Deduction" AND DATE(t.created) = 2023-01-22 THEN amount END), 0) AS "DEDUCTED TOTAL", ( IFNULL(SUM( CASE WHEN TYPE = "Added" AND DATE(t.created) <= 2023-01-21 THEN amount END), 0) - IFNULL(SUM( CASE WHEN TYPE = "Deduction" AND DATE(t.created) <= 2023-01-21 THEN amount END), 0)) AS "OPENING BAL", ( IFNULL(SUM( CASE WHEN TYPE = "Added" THEN amount END), 0) - IFNULL(SUM( CASE WHEN TYPE = "Deduction"
+                                 THEN amount END), 0)) AS CLOSINGBAL, `firstname`, `lastname`, `photo`
+FROM `map_emp_suspense` as `t`
+JOIN `employee` ON `employee`.`id` = `t`.`id_emp`
+GROUP BY `t`.`empid`) as y
+WHERE CLOSINGBAL > 0 
+GROUP BY `empid`', [], false)
+ 2 APPPATH\Models\transaction_model.php(154): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 04:03:55 --> mysqli_sql_exception: Unknown column 'empid' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 04:03:55 --> Unknown column 'empid' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (SELECT `empid`, IFNULL( SUM( CASE WHEN TYPE = "Added" AND DATE(t.created) = 2023-01-22 THEN amount END), 0) AS "ADDED TOTAL", IFNULL(SUM( CASE WHEN TYPE = "Deduction" AND DATE(t.created) = 2023-01-22 THEN amount END), 0) AS "DEDUCTED TOTAL", ( IFNULL(SUM( CASE WHEN TYPE = "Added" AND DATE(t.created) <= 2023-01-21 THEN amount END), 0) - IFNULL(SUM( CASE WHEN TYPE = "Deduction" AND DATE(t.created) <= 2023-01-21 THEN amount END), 0)) AS "OPENING BAL", ( IFNULL(SUM( CASE WHEN TYPE = "Added" THEN amount END), 0) - IFNULL(SUM( CASE WHEN TYPE = "Deduction"
+                                 THEN amount END), 0)) AS CLOSINGBAL, `firstname`, `lastname`, `photo`
+FROM `map_emp_suspense` as `t`
+JOIN `employee` ON `employee`.`id` = `t`.`id_emp`
+GROUP BY `t`.`id_emp`) as y
+WHERE CLOSINGBAL > 0 
+GROUP BY `empid`', [], false)
+ 2 APPPATH\Models\transaction_model.php(154): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 04:04:28 --> mysqli_sql_exception: Unknown column 'empid' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 04:04:28 --> Unknown column 'empid' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (SELECT `empid`, IFNULL( SUM( CASE WHEN TYPE = "Added" AND DATE(t.created) = 2023-01-22 THEN amount END), 0) AS "ADDED TOTAL", IFNULL(SUM( CASE WHEN TYPE = "Deduction" AND DATE(t.created) = 2023-01-22 THEN amount END), 0) AS "DEDUCTED TOTAL", ( IFNULL(SUM( CASE WHEN TYPE = "Added" AND DATE(t.created) <= 2023-01-21 THEN amount END), 0) - IFNULL(SUM( CASE WHEN TYPE = "Deduction" AND DATE(t.created) <= 2023-01-21 THEN amount END), 0)) AS "OPENING BAL", ( IFNULL(SUM( CASE WHEN TYPE = "Added" THEN amount END), 0) - IFNULL(SUM( CASE WHEN TYPE = "Deduction"
+                                 THEN amount END), 0)) AS CLOSINGBAL, `firstname`, `lastname`, `photo`
+FROM `map_emp_suspense` as `t`
+JOIN `employee` ON `employee`.`id` = `t`.`id_emp`
+GROUP BY `t`.`id_emp`) as y
+WHERE CLOSINGBAL > 0 
+GROUP BY `id_emp`', [], false)
+ 2 APPPATH\Models\transaction_model.php(154): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 04:05:58 --> mysqli_sql_exception: Unknown column 'TYPE' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(154): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 04:05:58 --> Unknown column 'TYPE' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (SELECT `id_emp`, IFNULL( SUM( CASE WHEN TYPE = "Added" AND DATE(t.created) = 2023-01-22 THEN amount END), 0) AS "ADDED TOTAL", IFNULL(SUM( CASE WHEN TYPE = "Deduction" AND DATE(t.created) = 2023-01-22 THEN amount END), 0) AS "DEDUCTED TOTAL", ( IFNULL(SUM( CASE WHEN TYPE = "Added" AND DATE(t.created) <= 2023-01-21 THEN amount END), 0) - IFNULL(SUM( CASE WHEN TYPE = "Deduction" AND DATE(t.created) <= 2023-01-21 THEN amount END), 0)) AS "OPENING BAL", ( IFNULL(SUM( CASE WHEN TYPE = "Added" THEN amount END), 0) - IFNULL(SUM( CASE WHEN TYPE = "Deduction"
+                                 THEN amount END), 0)) AS CLOSINGBAL, `firstname`, `lastname`, `photo`
+FROM `map_emp_suspense` as `t`
+JOIN `employee` ON `employee`.`id` = `t`.`id_emp`
+GROUP BY `t`.`id_emp`) as y
+WHERE CLOSINGBAL > 0 
+GROUP BY `id_emp`', [], false)
+ 2 APPPATH\Models\transaction_model.php(154): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 04:16:23 --> mysqli_sql_exception: Unknown column 't.created' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(153): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 04:16:23 --> Unknown column 't.created' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (SELECT `id_emp`, IFNULL( SUM( CASE WHEN DATE(t.created_at) = 2023-01-22 THEN added_sus END), 0) AS "ADDED TOTAL", IFNULL(SUM( CASE WHEN DATE(t.created) = 2023-01-22 THEN deducted_sus END), 0) AS "DEDUCTED TOTAL", ( IFNULL(SUM( CASE WHEN DATE(t.created) <= 2023-01-21 THEN added_sus END), 0) - IFNULL(SUM( CASE WHEN DATE(t.created) <= 2023-01-21 THEN deducted_sus END), 0)) AS "OPENING BAL", ( IFNULL(SUM(added_sus), 0) - IFNULL(SUM(deducted_sus), 0)) AS CLOSINGBAL, `firstname`, `lastname`, `photo`
+FROM `map_emp_suspense` as `t`
+JOIN `employee` ON `employee`.`id` = `t`.`id_emp`
+GROUP BY `t`.`id_emp`) as y
+WHERE CLOSINGBAL > 0 
+GROUP BY `id_emp`', [], false)
+ 2 APPPATH\Models\transaction_model.php(153): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 04:17:10 --> mysqli_sql_exception: Unknown column 'firstname' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(153): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 04:17:10 --> Unknown column 'firstname' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (SELECT `id_emp`, IFNULL( SUM( CASE WHEN DATE(t.created_at) = 2023-01-22 THEN added_sus END), 0) AS "ADDED TOTAL", IFNULL(SUM( CASE WHEN DATE(t.created_at) = 2023-01-22 THEN deducted_sus END), 0) AS "DEDUCTED TOTAL", ( IFNULL(SUM( CASE WHEN DATE(t.created_at) <= 2023-01-21 THEN added_sus END), 0) - IFNULL(SUM( CASE WHEN DATE(t.created_at) <= 2023-01-21 THEN deducted_sus END), 0)) AS "OPENING BAL", ( IFNULL(SUM(added_sus), 0) - IFNULL(SUM(deducted_sus), 0)) AS CLOSINGBAL, `firstname`, `lastname`, `photo`
+FROM `map_emp_suspense` as `t`
+JOIN `employee` ON `employee`.`id` = `t`.`id_emp`
+GROUP BY `t`.`id_emp`) as y
+WHERE CLOSINGBAL > 0 
+GROUP BY `id_emp`', [], false)
+ 2 APPPATH\Models\transaction_model.php(153): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 04:22:55 --> mysqli_sql_exception: Unknown column 'name.id' in 'on clause' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM (...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM (...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM (...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM (...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(155): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 04:22:55 --> Unknown column 'name.id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM (SELECT `id_emp`, IFNULL( SUM( CASE WHEN DATE(t.created_at) = 2023-01-22 THEN added_sus END), 0) AS "ADDED TOTAL", IFNULL(SUM( CASE WHEN DATE(t.created_at) = 2023-01-22 THEN deducted_sus END), 0) AS "DEDUCTED TOTAL", ( IFNULL(SUM( CASE WHEN DATE(t.created_at) <= 2023-01-21 THEN added_sus END), 0) - IFNULL(SUM( CASE WHEN DATE(t.created_at) <= 2023-01-21 THEN deducted_sus END), 0)) AS "OPENING BAL", ( IFNULL(SUM(added_sus), 0) - IFNULL(SUM(deducted_sus), 0)) AS CLOSINGBAL, `n`.`first_name`, `n`.`last_name`, `n`.`photo`
+FROM `map_emp_suspense` as `t`
+JOIN `employee` ON `employee`.`id` = `t`.`id_emp`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `name` as `n` ON `name`.`id` = `applicant`.`id_name`
+GROUP BY `t`.`id_emp`) as y
+WHERE CLOSINGBAL > 0 
+GROUP BY `id_emp`', [], false)
+ 2 APPPATH\Models\transaction_model.php(155): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(53): App\Models\Transaction_model->get_all_suspense()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-22 04:23:19 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\transaction_model.php on line 160.
+ 1 APPPATH\Controllers\transaction.php(54): App\Models\Transaction_model->get_emp_advance()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-22 04:26:10 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\transaction_model.php on line 160.
+ 1 APPPATH\Controllers\transaction.php(54): App\Models\Transaction_model->get_emp_advance()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-22 04:28:07 --> mysqli_sql_exception: Unknown column 'tbl_acc_sal_adv_log.created' in 'where clause' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\transaction_model.php(161): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\transaction.php(54): App\Models\Transaction_model->get_emp_advance()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Transaction->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 04:28:07 --> Unknown column 'tbl_acc_sal_adv_log.created' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_acc_sal_adv_log`
+JOIN `employee` ON `employee`.`id` = `tbl_acc_sal_adv_log`.`id_emp`
+WHERE Date(tbl_acc_sal_adv_log.created) = :Date(tbl_acc_sal_adv_log.created):', [...], false)
+ 2 APPPATH\Models\transaction_model.php(161): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\transaction.php(54): App\Models\Transaction_model->get_emp_advance()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-22 08:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-22 08:55:09 --> The route for "/login" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/login')
+ 2 SYSTEMPATH\Common.php(869): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\transaction.php(59): redirect('/login')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-22 09:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-22 09:43:18 --> The route for "/login" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/login')
+ 2 SYSTEMPATH\Common.php(869): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\transaction.php(59): redirect('/login')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Transaction->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-22 09:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-22 09:44:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-22 09:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-22 09:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-22 09:44:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-22 09:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-22 09:45:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-22 09:45:16 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\Payroll.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Payroll.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Payroll')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Payroll')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\Payroll')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Payroll', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-22 09:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-22 10:00:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-22 15:30:03 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\Payroll_model.php on line 42.
+ 1 APPPATH\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-22 13:53:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-22 13:53:59 --> The route for "/login" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/login')
+ 2 SYSTEMPATH\Common.php(869): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Payroll.php(46): redirect('/login')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-22 13:55:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-22 13:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-22 13:55:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-22 13:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-22 13:55:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-01-22 13:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-22 19:25:37 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\Payroll_model.php on line 42.
+ 1 APPPATH\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-22 13:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-22 19:25:38 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\Payroll_model.php on line 42.
+ 1 APPPATH\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-22 13:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-01-22 19:25:41 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\Payroll_model.php on line 42.
+ 1 APPPATH\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-01-22 13:57:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-01-22 19:27:41 --> mysqli_sql_exception: Table 'db_sec_app.tbl_emp' doesn't exist in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `first_n...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `first_n...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `first_n...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_n...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-01-22 19:27:42 --> Table 'db_sec_app.tbl_emp' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_name`, `last_name`, `name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `shift`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `shift`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `shift`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `shift`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `shift`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `shift`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `shift`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `shift`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `shift`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `shift`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `shift`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `shift`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `shift`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `shift`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `shift`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `shift`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `shift`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `shift`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `shift`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `shift`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `shift`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `shift`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `shift`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `shift`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `shift`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `shift`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `shift`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `shift`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `shift`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `shift`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `shift`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `tbl_emp` ON `tbl_emp`.`id` = `tbl_emp_attendence`.`empid`
+JOIN `tbl_client` ON `tbl_client`.`id`=`tbl_emp_attendence`.`client_id`
+JOIN `tbl_emp_map_client` ON `tbl_emp_map_client`.`empid` = `tbl_emp_attendence`.`empid`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `tbl_emp_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

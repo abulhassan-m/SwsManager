@@ -1,0 +1,187 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28 Jun, 2020, 9:31:30 PM
+    Author     : Muhammad Ansari
+*/
+.top_widget_contents {
+    border: 1px solid #E2E2E1;
+    padding: 15px;
+    ms-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 6px 3px 0px rgba(0, 0, 0, 0.2);    
+    .fa {
+        width: 66px;
+        height: 66px;
+        text-align: center;
+        line-height: 65px;
+    }
+    .rounded {
+        font-size: 25px;
+        color: white;
+        background-color: #E13300;
+        border-radius: 50px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        display: flex;
+        justify-content: center;
+        padding: 7px;
+        margin-right: 10% !important;
+    }
+    .inner_widget {
+        overflow: hidden;
+        h5 {
+            margin: 10px 0 5px 0;
+            color: #000;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 1.1;
+            strong {
+                font-weight: 700;
+            }
+        }
+    }
+    .open {
+        color: green;
+        .rounded {
+            background-color: green;
+            color: white;
+        }
+    }
+    .receipt {
+        color: #007bff;
+        .rounded {
+            background-color: #007bff;
+            color: white;
+        }
+    }
+    .voucher {
+        color: orangered;
+        .rounded {
+            background-color: orange;
+            color: white;
+        }
+    }
+}
+.top_widget{
+    margin-top: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    margin-left: -15px;
+}
+.row {   
+    margin-left: -15px; 
+}
+.pull-left {
+    float: left !important;
+    width: 50%;
+    cursor: pointer;
+}
+.box_panel {
+    border: 1px solid #E2E2E1;    
+    ms-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 6px 3px 0px rgba(0, 0, 0, 0.2);
+    margin: 0 15px 0 0 ;
+    padding: 20px;
+}
+.margin-right-0 {
+    margin-right: 0;
+}
+.margin-left-7 {
+    margin-left: 7px;
+}
+.clearfix {
+        display: table;
+        content: " ";
+}
+.margin-t-b-15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.table {
+    border-spacing: 0px;    
+}
+table{
+    thead {
+        border-style: outset;
+    }
+    th {
+        border:2px solid #E2E2E1;
+        padding: 10px;
+    }
+    tr {
+        border:4px solid #E2E2E1;
+    }
+    td {
+        border:4px solid #E2E2E1;
+        padding: 10px;
+    }
+}
+
+.panel-heading {
+    border-bottom: 1px solid #b2293029;
+    margin-bottom: 10px;
+}
+.panel-title {
+    font-size: 20px;
+    .small {
+        font-size: 75%;
+        line-height: 1;
+        color: #fff !important;
+        font-weight: 300 !important;
+    }
+}
+.small-badge {
+    overflow: hidden;
+    border: 2px solid #fff !important;
+    border-radius: 20px;
+    background-color: red;
+}
+.panel-body {
+    padding: 0 15px 15px 15px;
+    ul {
+        list-style:none;
+        li {
+            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+            font-size: .95rem;
+            font-weight: 700;
+            color: #000;
+        }
+    } 
+    h6 {
+        border-bottom: 1px solid #eee;
+            padding: 5px 0;
+            font-size: .75rem;
+            font-weight: 700;
+            color: #000;
+    }
+}
+.pull-right {
+    float: right !important;
+}
+.suspense_image {
+    width: 100%;
+    border-radius: 50%;
+    border-top: 3px solid #b22930;
+    border-bottom: 3px solid #b22930;
+}
+.suspense_title {
+    font-size: 16px;
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+.suspense_row {
+    border-bottom:1px solid #ffd6d6;
+    padding-bottom: 5px;
+}

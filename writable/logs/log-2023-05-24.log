@@ -1,0 +1,295 @@
+INFO - 2023-05-24 18:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 18:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 18:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 18:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 18:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 18:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 18:57:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 18:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 18:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 19:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 19:06:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 19:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-24 19:11:18 --> syntax error, unexpected ';', expecting ')'
+in APPPATH\Libraries\MenuLibrary.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Libraries\\MenuLibrary.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Libraries\\MenuLibrary')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Libraries\\MenuLibrary')
+ 4 APPPATH\Views\templates\header.php(47): spl_autoload_call('App\\Libraries\\MenuLibrary')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 8 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 19:26:32 --> Undefined index: class
+in APPPATH\Views\templates\header.php on line 50.
+ 1 APPPATH\Views\templates\header.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: class', 'APPPATH\\Views\\templates\\header.php', 50, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 19:31:31 --> Illegal string offset 'class'
+in APPPATH\Views\templates\header.php on line 50.
+ 1 APPPATH\Views\templates\header.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'class\'', 'APPPATH\\Views\\templates\\header.php', 50, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 19:35:53 --> Undefined index: class
+in APPPATH\Views\templates\header.php on line 50.
+ 1 APPPATH\Views\templates\header.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: class', 'APPPATH\\Views\\templates\\header.php', 50, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 19:48:40 --> Undefined index: class
+in APPPATH\Views\templates\header.php on line 51.
+ 1 APPPATH\Views\templates\header.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: class', 'APPPATH\\Views\\templates\\header.php', 51, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 19:50:16 --> Undefined index: class
+in APPPATH\Views\templates\header.php on line 51.
+ 1 APPPATH\Views\templates\header.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: class', 'APPPATH\\Views\\templates\\header.php', 51, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 19:53:11 --> Undefined index: sclass
+in APPPATH\Views\templates\header.php on line 51.
+ 1 APPPATH\Views\templates\header.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sclass', 'APPPATH\\Views\\templates\\header.php', 51, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 19:54:00 --> Undefined index: sclass
+in APPPATH\Views\templates\header.php on line 51.
+ 1 APPPATH\Views\templates\header.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sclass', 'APPPATH\\Views\\templates\\header.php', 51, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 19:54:48 --> Undefined index: sclass
+in APPPATH\Views\templates\header.php on line 51.
+ 1 APPPATH\Views\templates\header.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sclass', 'APPPATH\\Views\\templates\\header.php', 51, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 19:55:13 --> Undefined index: url
+in APPPATH\Views\templates\header.php on line 52.
+ 1 APPPATH\Views\templates\header.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: url', 'APPPATH\\Views\\templates\\header.php', 52, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:05:58 --> Undefined index: sclass
+in APPPATH\Views\templates\header.php on line 51.
+ 1 APPPATH\Views\templates\header.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sclass', 'APPPATH\\Views\\templates\\header.php', 51, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:07:27 --> Undefined index: sclass
+in APPPATH\Views\templates\header.php on line 51.
+ 1 APPPATH\Views\templates\header.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sclass', 'APPPATH\\Views\\templates\\header.php', 51, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:09:47 --> Undefined index: sclass
+in APPPATH\Views\templates\header.php on line 51.
+ 1 APPPATH\Views\templates\header.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sclass', 'APPPATH\\Views\\templates\\header.php', 51, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:10:32 --> Undefined index: sclass
+in APPPATH\Views\templates\header.php on line 51.
+ 1 APPPATH\Views\templates\header.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sclass', 'APPPATH\\Views\\templates\\header.php', 51, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:10:44 --> Undefined index: sclass
+in APPPATH\Views\templates\header.php on line 51.
+ 1 APPPATH\Views\templates\header.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sclass', 'APPPATH\\Views\\templates\\header.php', 51, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:12:59 --> Undefined index: text
+in APPPATH\Views\templates\header.php on line 51.
+ 1 APPPATH\Views\templates\header.php(51): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: text', 'APPPATH\\Views\\templates\\header.php', 51, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:15:25 --> Undefined index: sclass
+in APPPATH\Views\templates\header.php on line 52.
+ 1 APPPATH\Views\templates\header.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sclass', 'APPPATH\\Views\\templates\\header.php', 52, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:15:55 --> Undefined index: sclass
+in APPPATH\Views\templates\header.php on line 52.
+ 1 APPPATH\Views\templates\header.php(52): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: sclass', 'APPPATH\\Views\\templates\\header.php', 52, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:17:20 --> Undefined index: url
+in APPPATH\Views\templates\header.php on line 53.
+ 1 APPPATH\Views\templates\header.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: url', 'APPPATH\\Views\\templates\\header.php', 53, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:17:41 --> Undefined index: url
+in APPPATH\Views\templates\header.php on line 53.
+ 1 APPPATH\Views\templates\header.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: url', 'APPPATH\\Views\\templates\\header.php', 53, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:18:04 --> Undefined index: url
+in APPPATH\Views\templates\header.php on line 53.
+ 1 APPPATH\Views\templates\header.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: url', 'APPPATH\\Views\\templates\\header.php', 53, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:21:15 --> Undefined index: surl
+in APPPATH\Views\templates\header.php on line 53.
+ 1 APPPATH\Views\templates\header.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: surl', 'APPPATH\\Views\\templates\\header.php', 53, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:45:58 --> syntax error, unexpected ';', expecting ')'
+in APPPATH\Libraries\MenuLibrary.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Libraries\\MenuLibrary.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Libraries\\MenuLibrary')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Libraries\\MenuLibrary')
+ 4 APPPATH\Views\templates\header.php(47): spl_autoload_call('App\\Libraries\\MenuLibrary')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 8 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:47:02 --> syntax error, unexpected ';', expecting ')'
+in APPPATH\Libraries\MenuLibrary.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Libraries\\MenuLibrary.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Libraries\\MenuLibrary')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Libraries\\MenuLibrary')
+ 4 APPPATH\Views\templates\header.php(47): spl_autoload_call('App\\Libraries\\MenuLibrary')
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 8 APPPATH\Controllers\Applicant.php(36): view('templates/header', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Applicant->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Applicant))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-24 21:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 21:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 21:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 21:06:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 21:06:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 21:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 21:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 21:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 21:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-24 21:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

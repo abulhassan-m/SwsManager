@@ -1,0 +1,108 @@
+INFO - 2023-08-01 08:19:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:19:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:20:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:20:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:25:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:25:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:29:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:40:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:43:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 08:44:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:16:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:20:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:30:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:46:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:52:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:53:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:54:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-01 15:24:54 --> mysqli_sql_exception: Table 'db_sec_app.tbl_client' doesn't exist in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `first_n...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `first_n...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `first_n...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_n...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-01 15:24:55 --> Table 'db_sec_app.tbl_client' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_name`, `last_name`, `name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `shift`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `shift`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `shift`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `shift`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `shift`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `shift`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `shift`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `shift`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `shift`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `shift`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `shift`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `shift`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `shift`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `shift`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `shift`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `shift`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `shift`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `shift`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `shift`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `shift`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `shift`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `shift`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `shift`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `shift`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `shift`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `shift`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `shift`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `shift`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `shift`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `shift`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `shift`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `employee_attendence`.`empid`
+JOIN `tbl_client` ON `tbl_client`.`id`=`employee_attendence`.`client_id`
+JOIN `employee_map_client` ON `employee_map_client`.`empid` = `employee_attendence`.`empid`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `employee_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-01 09:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:55:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:56:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:56:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:57:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:59:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 09:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:00:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:01:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:03:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:06:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:13:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-01 10:17:59 --> Invalid argument supplied for foreach()
+in APPPATH\Views\templates\header.php on line 19.
+ 1 APPPATH\Views\templates\header.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\templates\\header.php', 19, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Home.php(31): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-01 10:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 10:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 11:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-01 11:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

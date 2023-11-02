@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css");
+body {
+  background: #666;
+  padding: 0;
+  margin: 0;
+  font-family: Roboto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "head nav" "side main" "side foot";
+  grid-template-rows: 50px 1fr 30px;
+  grid-template-columns: 200px 1fr;
+}
+
+header {
+  grid-area: head;
+  margin: 0;
+  padding: 1%;
+}
+
+.navbar {
+  grid-area: nav;
+  width: 100%;
+}
+
+.is_position_fixed_top {
+  position: fixed;
+  top: 0;
+  background-color: #8ca0ff;
+}
+
+.sidebar {
+  grid-area: side;
+  background: #d7d9db;
+}
+
+.sidebar .sidebar-wrapper .menu {
+  padding: 1px;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar .sidebar-wrapper .menu li {
+  padding: 15px 10px 15px 10px;
+  border-bottom: 1px solid #abc;
+  font: 18px;
+  color: #f00;
+}
+
+.sidebar .sidebar-wrapper .menu li:hover {
+  background: #abc;
+}
+
+.mainpanel {
+  grid-area: main;
+  background-color: #8ca;
+}

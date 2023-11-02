@@ -1,0 +1,166 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20 Jun, 2020, 7:44:53 PM
+    Author     : Muhammad Ansari
+*/
+#emp-details-main {
+  margin: 0 auto 1.5em auto;
+  position: relative;
+  background: rgba(226, 216, 216, 0.35);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  width: 95%;
+}
+
+.emp-tab-wrap {
+  position: relative;
+}
+.emp-tab-wrap .emp-tab-menu {
+  list-style: none;
+  text-align: center;
+  margin-bottom: 2em;
+  position: relative;
+  top: -.5em;
+  padding: 0;
+  margin: 0;
+}
+.emp-tab-wrap .emp-tab-menu li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.emp-tab-wrap .emp-tab-menu li a {
+  padding: 2em 1em 1em 1em;
+  position: relative;
+  color: rgba(226, 216, 216, 0.35);
+  z-index: 10;
+  display: -moz-inline-stack;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  color: #b22930;
+}
+.emp-tab-wrap .emp-tab-menu li a .menu-text {
+  display: block;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.emp-tab-wrap .emp-tab-menu li a::after {
+  position: absolute;
+  content: "";
+  height: 0;
+  background: #b22930;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  border-radius: 7px;
+}
+.emp-tab-wrap .emp-tab-menu li.active > a {
+  color: #fff;
+  text-decoration: none;
+}
+.emp-tab-wrap .emp-tab-menu li.active > a::after {
+  height: 100%;
+}
+.emp-tab-wrap .emp-tab-content {
+  padding-left: 2em;
+  padding-right: 2em;
+  top: 0;
+  opacity: 0;
+  display: none;
+}
+.emp-tab-wrap .emp-tab-content.active {
+  opacity: 1;
+  display: block;
+  height: auto;
+}
+.emp-tab-wrap .emp-tab-content .emp-content-inner {
+  padding: 2em 2em 2em 2em;
+  float: left;
+  position: relative;
+}
+
+.emp-content-inner {
+  display: grid;
+  justify-content: center;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+li {
+  list-style: none;
+  padding: 2px 0 2px 0;
+}
+
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #17e7a4;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  color: #337ab7;
+  text-decoration: none;
+}
+
+.row-bottom-padded-sm {
+  padding-bottom: 1em;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.row::before {
+  content: " ";
+  display: table;
+}
+.row::after {
+  content: " ";
+  display: table;
+}
+
+img {
+  vertical-align: middle;
+  border-radius: 100%;
+  /*border-top: 10px solid #b22930;*/
+  border-right: 10px solid #b22930;
+  border-left: 10px solid #b22930;
+  width: 90%;
+  height: 90%;
+  padding: 7px;
+}
+
+/*# sourceMappingURL=details_emp.css.map */

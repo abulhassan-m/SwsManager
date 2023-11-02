@@ -1,0 +1,18 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 Aug, 2020, 12:34:29 AM
+    Author     : Muhammad Ansari
+*/
+
+.card{
+    background-color: #FFFFFF;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: $border-radius-large;
+    color: $mdb-card-body-text;
+    background: $mdb-card-body-background;
+}

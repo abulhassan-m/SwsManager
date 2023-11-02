@@ -1,0 +1,321 @@
+INFO - 2023-05-31 07:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 07:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 07:16:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 07:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 07:39:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 07:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 07:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 07:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 07:40:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-31 13:10:01 --> mysqli_sql_exception: Table 'db_sec_app.tbl_client' doesn't exist in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `first_n...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `first_n...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `first_n...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_n...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-31 13:10:02 --> Table 'db_sec_app.tbl_client' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_name`, `last_name`, `name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `shift`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `shift`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `shift`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `shift`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `shift`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `shift`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `shift`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `shift`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `shift`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `shift`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `shift`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `shift`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `shift`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `shift`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `shift`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `shift`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `shift`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `shift`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `shift`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `shift`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `shift`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `shift`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `shift`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `shift`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `shift`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `shift`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `shift`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `shift`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `shift`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `shift`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `shift`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `employee_attendence`.`empid`
+JOIN `tbl_client` ON `tbl_client`.`id`=`employee_attendence`.`client_id`
+JOIN `employee_map_client` ON `employee_map_client`.`empid` = `employee_attendence`.`empid`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `employee_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-31 07:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 07:40:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-31 13:10:57 --> mysqli_sql_exception: Table 'db_sec_app.tbl_client' doesn't exist in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `first_n...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `first_n...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `first_n...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_n...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-31 13:10:57 --> Table 'db_sec_app.tbl_client' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_name`, `last_name`, `name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `shift`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `shift`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `shift`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `shift`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `shift`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `shift`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `shift`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `shift`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `shift`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `shift`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `shift`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `shift`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `shift`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `shift`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `shift`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `shift`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `shift`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `shift`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `shift`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `shift`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `shift`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `shift`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `shift`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `shift`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `shift`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `shift`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `shift`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `shift`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `shift`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `shift`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `shift`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `employee_attendence`.`empid`
+JOIN `tbl_client` ON `tbl_client`.`id`=`employee_attendence`.`client_id`
+JOIN `employee_map_client` ON `employee_map_client`.`empid` = `employee_attendence`.`empid`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `employee_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-31 07:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 07:41:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-31 07:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-31 07:41:21 --> Call to undefined function date_range()
+in APPPATH\Views\list\attendance.php on line 165.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/attendance', [], true)
+ 4 APPPATH\Controllers\Attendance.php(49): view('list/attendance', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Attendance->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Attendance))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 07:41:28 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\Uniform.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Uniform.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Uniform')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Uniform')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\Uniform')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Uniform', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-31 07:41:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-31 07:41:32 --> Call to undefined function date_range()
+in APPPATH\Views\list\attendance.php on line 165.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/attendance', [], true)
+ 4 APPPATH\Controllers\Attendance.php(49): view('list/attendance', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Attendance->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Attendance))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 07:41:36 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\user.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\user.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\User')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\User')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\User')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\User', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-31 07:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-31 07:41:40 --> Call to undefined function date_range()
+in APPPATH\Views\list\attendance.php on line 165.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/attendance', [], true)
+ 4 APPPATH\Controllers\Attendance.php(49): view('list/attendance', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Attendance->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Attendance))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 07:41:43 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\Reports.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Reports.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Reports')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Reports')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\Reports')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Reports', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-31 07:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-31 07:41:46 --> Call to undefined function date_range()
+in APPPATH\Views\list\attendance.php on line 165.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/attendance', [], true)
+ 4 APPPATH\Controllers\Attendance.php(49): view('list/attendance', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Attendance->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Attendance))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 07:41:51 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\Settings.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Settings.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\settings')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\settings')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\settings')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\settings', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-31 07:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-31 07:41:54 --> Call to undefined function date_range()
+in APPPATH\Views\list\attendance.php on line 165.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/attendance', [], true)
+ 4 APPPATH\Controllers\Attendance.php(49): view('list/attendance', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Attendance->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Attendance))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 07:41:57 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\Utilities.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Utilities.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Utilities')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Utilities')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\Utilities')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Utilities', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-31 07:42:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-31 07:42:00 --> Call to undefined function date_range()
+in APPPATH\Views\list\attendance.php on line 165.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/attendance', [], true)
+ 4 APPPATH\Controllers\Attendance.php(49): view('list/attendance', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Attendance->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Attendance))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 07:42:03 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\Settings.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Settings.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Settings')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Settings')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\Settings')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Settings', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-31 07:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-31 07:42:06 --> Call to undefined function date_range()
+in APPPATH\Views\list\attendance.php on line 165.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/attendance', [], true)
+ 4 APPPATH\Controllers\Attendance.php(49): view('list/attendance', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Attendance->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Attendance))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-31 07:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-31 07:55:07 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\user.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\user.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\User')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\User')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\User')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\User', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 07:58:31 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\user.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\user.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\User')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\User')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\User')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\User', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 07:58:36 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\user.php on line 9.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\user.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\User')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\User')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\User')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\User', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 07:59:44 --> Undefined property: App\Controllers\User::$form_validation
+in APPPATH\Controllers\user.php on line 26.
+ 1 APPPATH\Controllers\user.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\User::$form_validation', 'APPPATH\\Controllers\\user.php', 26, [])
+ 2 APPPATH\Controllers\user.php(21): App\Controllers\User->register()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 08:12:56 --> "firstname" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 320.
+ 1 SYSTEMPATH\Validation\Validation.php(320): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('firstname')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('0', '0', null, [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\user.php(59): CodeIgniter\Controller->validate([...])
+ 5 APPPATH\Controllers\user.php(20): App\Controllers\User->register()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 08:21:57 --> Undefined variable: module
+in APPPATH\Views\templates\header.php on line 16.
+ 1 APPPATH\Views\templates\header.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: module', 'APPPATH\\Views\\templates\\header.php', 16, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\user.php(60): view('templates/header', [...])
+ 6 APPPATH\Controllers\user.php(20): App\Controllers\User->register()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 08:25:04 --> Undefined variable: module
+in APPPATH\Views\templates\header.php on line 16.
+ 1 APPPATH\Views\templates\header.php(16): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: module', 'APPPATH\\Views\\templates\\header.php', 16, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\user.php(83): view('templates/header', [...])
+ 6 APPPATH\Controllers\user.php(43): App\Controllers\User->register()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 08:27:53 --> Undefined variable: title
+in APPPATH\Views\templates\header.php on line 9.
+ 1 APPPATH\Views\templates\header.php(9): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\templates\\header.php', 9, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\user.php(43): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 08:28:41 --> syntax error, unexpected '$data' (T_VARIABLE)
+in APPPATH\Controllers\user.php on line 31.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\user.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\User')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\User')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\User')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\User', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-31 08:28:57 --> Call to undefined function form_open()
+in APPPATH\Views\user\register.php on line 10.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('user/register', [], true)
+ 4 APPPATH\Controllers\user.php(85): view('user/register')
+ 5 APPPATH\Controllers\user.php(45): App\Controllers\User->register()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

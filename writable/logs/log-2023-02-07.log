@@ -1,0 +1,48 @@
+INFO - 2023-02-07 02:31:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 02:32:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 02:32:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 02:41:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 07:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 07:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 08:00:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 08:00:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 08:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 10:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 10:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 10:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 10:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 10:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 10:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 11:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-02-07 16:30:11 --> mysqli_sql_exception: Table 'db_sec_app.tbl_client' doesn't exist in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `first_n...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `first_n...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `first_n...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_n...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-02-07 16:30:11 --> Table 'db_sec_app.tbl_client' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_name`, `last_name`, `name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `shift`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `shift`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `shift`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `shift`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `shift`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `shift`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `shift`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `shift`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `shift`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `shift`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `shift`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `shift`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `shift`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `shift`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `shift`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `shift`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `shift`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `shift`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `shift`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `shift`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `shift`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `shift`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `shift`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `shift`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `shift`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `shift`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `shift`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `shift`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `shift`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `shift`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `shift`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `employee_attendence`.`empid`
+JOIN `tbl_client` ON `tbl_client`.`id`=`employee_attendence`.`client_id`
+JOIN `employee_map_client` ON `employee_map_client`.`empid` = `employee_attendence`.`empid`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `employee_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(41): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-02-07 11:00:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 11:43:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 11:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-02-07 11:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

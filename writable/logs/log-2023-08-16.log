@@ -1,0 +1,805 @@
+ERROR - 2023-08-16 02:00:47 --> mysqli_sql_exception: Table 'db_sec_app.tbl_client' doesn't exist in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `first_n...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `first_n...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `first_n...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_n...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 02:00:47 --> Table 'db_sec_app.tbl_client' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_name`, `last_name`, `name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `shift`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `shift`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `shift`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `shift`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `shift`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `shift`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `shift`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `shift`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `shift`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `shift`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `shift`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `shift`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `shift`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `shift`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `shift`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `shift`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `shift`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `shift`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `shift`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `shift`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `shift`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `shift`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `shift`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `shift`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `shift`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `shift`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `shift`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `shift`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `shift`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `shift`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `shift`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `emp_attendence`.`empid`
+JOIN `tbl_client` ON `tbl_client`.`id`=`emp_attendence`.`client_id`
+JOIN `map_employee_unit` ON `employee_map_client`.`empid` = `employee_attendence`.`empid`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `employee_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-16 02:09:05 --> mysqli_sql_exception: Unknown column 'first_name' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `first_n...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `first_n...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `first_n...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_n...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 02:09:05 --> Unknown column 'first_name' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `first_name`, `last_name`, `name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `shift`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `shift`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `shift`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `shift`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `shift`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `shift`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `shift`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `shift`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `shift`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `shift`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `shift`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `shift`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `shift`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `shift`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `shift`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `shift`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `shift`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `shift`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `shift`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `shift`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `shift`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `shift`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `shift`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `shift`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `shift`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `shift`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `shift`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `shift`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `shift`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `shift`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `shift`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `emp_attendence`.`empid`
+JOIN `map_employee_unit` ON `map_employee_unit`.`empid` = `emp_attendence`.`empid`
+JOIN `unit` ON `unit`.`id`=`map_employee_unit`.`unit_id`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `emp_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(46): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-16 02:13:54 --> mysqli_sql_exception: Unknown column 'shift' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `name`.`...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`.`...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`.`...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 02:13:54 --> Unknown column 'shift' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`first_name`, `name`.`last_name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `shift`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `shift`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `shift`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `shift`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `shift`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `shift`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `shift`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `shift`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `shift`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `shift`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `shift`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `shift`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `shift`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `shift`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `shift`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `shift`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `shift`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `shift`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `shift`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `shift`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `shift`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `shift`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `shift`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `shift`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `shift`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `shift`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `shift`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `shift`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `shift`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `shift`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `shift`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `emp_attendence`.`empid`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `name` ON `name`.`id` = `applicant`.`id_name`
+JOIN `map_employee_unit` ON `map_employee_unit`.`empid` = `emp_attendence`.`empid`
+JOIN `unit` ON `unit`.`id`=`map_employee_unit`.`unit_id`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `emp_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-16 02:19:38 --> mysqli_sql_exception: Column 'status' in field list is ambiguous in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `name`.`...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`.`...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`.`...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 02:19:38 --> Column 'status' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`first_name`, `name`.`last_name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `status`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `status`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `status`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `status`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `status`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `status`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `status`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `status`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `status`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `status`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `status`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `status`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `status`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `status`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `status`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `status`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `status`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `status`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `status`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `status`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `status`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `status`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `status`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `status`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `status`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `status`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `status`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `status`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `status`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `status`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `status`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `emp_attendence`.`empid`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `name` ON `name`.`id` = `applicant`.`id_name`
+JOIN `map_employee_unit` ON `map_employee_unit`.`empid` = `emp_attendence`.`empid`
+JOIN `unit` ON `unit`.`id`=`map_employee_unit`.`unit_id`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `emp_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-16 02:21:39 --> mysqli_sql_exception: Column 'status' in field list is ambiguous in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `name`.`...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`.`...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`.`...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 02:21:39 --> Column 'status' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`first_name`, `name`.`last_name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `status`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `status`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `status`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `status`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `status`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `status`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `status`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `status`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `status`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `status`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `status`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `status`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `status`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `status`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `status`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `status`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `status`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `status`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `status`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `status`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `status`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `status`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `status`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `status`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `status`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `status`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `status`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `status`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `status`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `status`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `status`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `emp_attendence`.`empid`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `name` ON `name`.`id` = `applicant`.`id_name`
+JOIN `map_employee_unit` ON `map_employee_unit`.`empid` = `emp_attendence`.`empid`
+JOIN `unit` ON `unit`.`id`=`map_employee_unit`.`unit_id`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `emp_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-08-16 02:23:21 --> mysqli_sql_exception: Unknown column 'emp_attendance.status' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `name`.`...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`.`...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`.`...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 02:23:21 --> Unknown column 'emp_attendance.status' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`first_name`, `name`.`last_name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `emp_attendance`.`status`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `emp_attendance.status`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `emp_attendance.status`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `emp_attendance.status`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `emp_attendance.status`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `emp_attendance.status`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `emp_attendance.status`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `emp_attendance.status`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `emp_attendance.status`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `emp_attendance.status`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `emp_attendance.status`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `emp_attendance.status`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `emp_attendance.status`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `emp_attendance.status`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `emp_attendance.status`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `emp_attendance.status`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `emp_attendance.status`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `emp_attendance.status`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `emp_attendance.status`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `emp_attendance.status`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `emp_attendance.status`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `emp_attendance.status`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `emp_attendance.status`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `emp_attendance.status`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `emp_attendance.status`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `emp_attendance.status`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `emp_attendance.status`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `emp_attendance.status`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `emp_attendance.status`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `emp_attendance.status`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `emp_attendance.status`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `emp_attendence`.`empid`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `name` ON `name`.`id` = `applicant`.`id_name`
+JOIN `map_employee_unit` ON `map_employee_unit`.`empid` = `emp_attendence`.`empid`
+JOIN `unit` ON `unit`.`id`=`map_employee_unit`.`unit_id`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `emp_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 07:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 07:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 07:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 07:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 07:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 07:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 07:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 07:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 07:11:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 07:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-16 12:41:25 --> mysqli_sql_exception: Unknown column 'emp_attendance.status' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `name`.`...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`.`...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`.`...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 12:41:25 --> Unknown column 'emp_attendance.status' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`first_name`, `name`.`last_name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `emp_attendance`.`status`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `emp_attendance.status`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `emp_attendance.status`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `emp_attendance.status`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `emp_attendance.status`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `emp_attendance.status`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `emp_attendance.status`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `emp_attendance.status`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `emp_attendance.status`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `emp_attendance.status`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `emp_attendance.status`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `emp_attendance.status`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `emp_attendance.status`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `emp_attendance.status`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `emp_attendance.status`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `emp_attendance.status`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `emp_attendance.status`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `emp_attendance.status`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `emp_attendance.status`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `emp_attendance.status`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `emp_attendance.status`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `emp_attendance.status`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `emp_attendance.status`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `emp_attendance.status`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `emp_attendance.status`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `emp_attendance.status`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `emp_attendance.status`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `emp_attendance.status`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `emp_attendance.status`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `emp_attendance.status`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `emp_attendance.status`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `emp_attendence`.`empid`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `name` ON `name`.`id` = `applicant`.`id_name`
+JOIN `map_employee_unit` ON `map_employee_unit`.`empid` = `emp_attendence`.`empid`
+JOIN `unit` ON `unit`.`id`=`map_employee_unit`.`unit_id`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `emp_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 07:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-16 12:42:05 --> mysqli_sql_exception: Column 'status' in field list is ambiguous in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `name`.`...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`.`...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`.`...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 12:42:05 --> Column 'status' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`first_name`, `name`.`last_name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `status`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `status`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `status`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `status`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `status`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `status`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `status`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `status`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `status`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `status`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `status`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `status`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `status`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `status`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `status`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `status`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `status`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `status`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `status`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `status`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `status`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `status`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `status`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `status`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `status`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `status`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `status`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `status`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `status`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `status`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `status`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `emp_attendence`.`empid`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `name` ON `name`.`id` = `applicant`.`id_name`
+JOIN `map_employee_unit` ON `map_employee_unit`.`empid` = `emp_attendence`.`empid`
+JOIN `unit` ON `unit`.`id`=`map_employee_unit`.`unit_id`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `emp_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 07:13:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-16 12:43:24 --> mysqli_sql_exception: Unknown column 'shift' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `name`.`...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`.`...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`.`...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 12:43:24 --> Unknown column 'shift' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`first_name`, `name`.`last_name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `shift`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `shift`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `shift`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `shift`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `shift`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `shift`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `shift`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `shift`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `shift`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `shift`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `shift`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `shift`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `shift`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `shift`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `shift`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `shift`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `shift`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `shift`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `shift`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `shift`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `shift`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `shift`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `shift`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `shift`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `shift`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `shift`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `shift`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `shift`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `shift`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `shift`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `shift`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `emp_attendence`.`empid`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `name` ON `name`.`id` = `applicant`.`id_name`
+JOIN `map_employee_unit` ON `map_employee_unit`.`empid` = `emp_attendence`.`empid`
+JOIN `unit` ON `unit`.`id`=`map_employee_unit`.`unit_id`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `emp_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 07:16:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-16 12:46:52 --> mysqli_sql_exception: Unknown column 'shift' in 'field list' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `name`.`...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`.`...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`.`...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 12:46:52 --> Unknown column 'shift' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`first_name`, `name`.`last_name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `shift`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `shift`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `shift`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `shift`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `shift`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `shift`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `shift`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `shift`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `shift`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `shift`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `shift`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `shift`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `shift`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `shift`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `shift`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `shift`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `shift`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `shift`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `shift`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `shift`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `shift`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `shift`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `shift`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `shift`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `shift`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `shift`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `shift`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `shift`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `shift`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `shift`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `shift`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `emp_attendence`.`empid`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `name` ON `name`.`id` = `applicant`.`id_name`
+JOIN `map_employee_unit` ON `map_employee_unit`.`empid` = `emp_attendence`.`empid`
+JOIN `unit` ON `unit`.`id`=`map_employee_unit`.`unit_id`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `emp_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 07:35:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-16 13:05:07 --> mysqli_sql_exception: Unknown column 'emp_attendence.empid' in 'on clause' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `name`.`...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`.`...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`.`...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 13:05:07 --> Unknown column 'emp_attendence.empid' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`first_name`, `name`.`last_name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `shift`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `shift`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `shift`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `shift`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `shift`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `shift`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `shift`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `shift`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `shift`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `shift`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `shift`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `shift`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `shift`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `shift`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `shift`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `shift`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `shift`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `shift`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `shift`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `shift`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `shift`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `shift`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `shift`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `shift`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `shift`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `shift`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `shift`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `shift`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `shift`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `shift`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `shift`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `emp_attendence`.`empid`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `name` ON `name`.`id` = `applicant`.`id_name`
+JOIN `map_employee_unit` ON `map_employee_unit`.`empid` = `emp_attendence`.`empid`
+JOIN `unit` ON `unit`.`id`=`map_employee_unit`.`unit_id`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `emp_attendence`.`empid`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 07:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-16 13:06:07 --> mysqli_sql_exception: Unknown column 'emp_attendence.emp_id' in 'on clause' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `name`.`...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`.`...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`.`...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 13:06:07 --> Unknown column 'emp_attendence.emp_id' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`first_name`, `name`.`last_name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `shift`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `shift`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `shift`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `shift`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `shift`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `shift`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `shift`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `shift`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `shift`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `shift`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `shift`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `shift`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `shift`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `shift`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `shift`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `shift`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `shift`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `shift`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `shift`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `shift`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `shift`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `shift`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `shift`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `shift`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `shift`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `shift`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `shift`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `shift`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `shift`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `shift`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `shift`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `emp_attendence`.`emp_id`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `name` ON `name`.`id` = `applicant`.`id_name`
+JOIN `map_employee_unit` ON `map_employee_unit`.`empid` = `emp_attendence`.`emp_id`
+JOIN `unit` ON `unit`.`id`=`map_employee_unit`.`unit_id`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `emp_attendence`.`emp_id`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 07:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-16 13:07:12 --> mysqli_sql_exception: Unknown column 'map_employee_unit.empid' in 'on clause' in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `name`.`...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `name`.`...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `name`.`...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Payroll->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 13:07:12 --> Unknown column 'map_employee_unit.empid' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `name`.`first_name`, `name`.`last_name`, `salary`, GROUP_CONCAT(if(DAY(`Date`) = 1, `shift`, NULL)) AS day1, GROUP_CONCAT(if(DAY(`Date`) = 2, `shift`, NULL)) AS day2, GROUP_CONCAT(if(DAY(`Date`) = 3, `shift`, NULL)) AS day3, GROUP_CONCAT(if(DAY(`Date`) = 4, `shift`, NULL)) AS day4, GROUP_CONCAT(if(DAY(`Date`) = 5, `shift`, NULL)) AS day5, GROUP_CONCAT(if(DAY(`Date`) = 6, `shift`, NULL)) AS day6, GROUP_CONCAT(if(DAY(`Date`) = 7, `shift`, NULL)) AS day7, GROUP_CONCAT(if(DAY(`Date`) = 8, `shift`, NULL)) AS day8, GROUP_CONCAT(if(DAY(`Date`) = 9, `shift`, NULL)) AS day9, GROUP_CONCAT(if(DAY(`Date`) = 10, `shift`, NULL)) AS day10, GROUP_CONCAT(if(DAY(`Date`) = 11, `shift`, NULL)) AS day11, GROUP_CONCAT(if(DAY(`Date`) = 12, `shift`, NULL)) AS day12, GROUP_CONCAT(if(DAY(`Date`) = 13, `shift`, NULL)) AS day13, GROUP_CONCAT(if(DAY(`Date`) = 14, `shift`, NULL)) AS day14, GROUP_CONCAT(if(DAY(`Date`) = 15, `shift`, NULL)) AS day15, GROUP_CONCAT(if(DAY(`Date`) = 16, `shift`, NULL)) AS day16, GROUP_CONCAT(if(DAY(`Date`) = 17, `shift`, NULL)) AS day17, GROUP_CONCAT(if(DAY(`Date`) = 18, `shift`, NULL)) AS day18, GROUP_CONCAT(if(DAY(`Date`) = 19, `shift`, NULL)) AS day19, GROUP_CONCAT(if(DAY(`Date`) = 20, `shift`, NULL)) AS day20, GROUP_CONCAT(if(DAY(`Date`) = 21, `shift`, NULL)) AS day21, GROUP_CONCAT(if(DAY(`Date`) = 22, `shift`, NULL)) AS day22, GROUP_CONCAT(if(DAY(`Date`) = 23, `shift`, NULL)) AS day23, GROUP_CONCAT(if(DAY(`Date`) = 24, `shift`, NULL)) AS day24, GROUP_CONCAT(if(DAY(`Date`) = 25, `shift`, NULL)) AS day25, GROUP_CONCAT(if(DAY(`Date`) = 26, `shift`, NULL)) AS day26, GROUP_CONCAT(if(DAY(`Date`) = 27, `shift`, NULL)) AS day27, GROUP_CONCAT(if(DAY(`Date`) = 28, `shift`, NULL)) AS day28, GROUP_CONCAT(if(DAY(`Date`) = 29, `shift`, NULL)) AS day29, GROUP_CONCAT(if(DAY(`Date`) = 30, `shift`, NULL)) AS day30, GROUP_CONCAT(if(DAY(`Date`) = 31, `shift`, NULL)) AS day31
+FROM `emp_attendance`
+JOIN `employee` ON `employee`.`id` = `emp_attendance`.`emp_id`
+JOIN `applicant` ON `applicant`.`id` = `employee`.`appln_id`
+JOIN `name` ON `name`.`id` = `applicant`.`id_name`
+JOIN `map_employee_unit` ON `map_employee_unit`.`empid` = `emp_attendance`.`emp_id`
+JOIN `unit` ON `unit`.`id`=`map_employee_unit`.`unit_id`
+WHERE MONTH(Date) = :MONTH(Date):
+GROUP BY `emp_attendance`.`emp_id`', [...], false)
+ 2 APPPATH\Models\Payroll_model.php(48): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Payroll.php(43): App\Models\Payroll_model->get_all_lists()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 07:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 13:07:39 --> Undefined variable: user_role
+in APPPATH\Views\templates\header.php on line 41.
+ 1 APPPATH\Views\templates\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_role', 'APPPATH\\Views\\templates\\header.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Payroll.php(44): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Payroll->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Payroll))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 07:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 07:59:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 13:29:37 --> Undefined variable: user_role
+in APPPATH\Views\templates\header.php on line 41.
+ 1 APPPATH\Views\templates\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_role', 'APPPATH\\Views\\templates\\header.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Bill.php(44): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Bill->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bill))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:00:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:01:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:01:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:01:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:01:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:04:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:08:01 --> Function name must be a string
+in APPPATH\Controllers\Bill.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Bill->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Bill))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:08:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:09:02 --> Undefined variable: user_role
+in APPPATH\Views\templates\header.php on line 41.
+ 1 APPPATH\Views\templates\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_role', 'APPPATH\\Views\\templates\\header.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\Attendance.php(48): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Attendance->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Attendance))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:10:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:10:44 --> Call to undefined function date_range()
+in APPPATH\Views\list\attendance.php on line 165.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/attendance', [], true)
+ 4 APPPATH\Controllers\Attendance.php(50): view('list/attendance', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Attendance->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Attendance))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 08:11:21 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\Uniform.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Uniform.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Uniform')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Uniform')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\Uniform')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Uniform', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:16:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:16:29 --> Undefined variable: user_role
+in APPPATH\Views\templates\header.php on line 41.
+ 1 APPPATH\Views\templates\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_role', 'APPPATH\\Views\\templates\\header.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\user.php(44): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 08:18:19 --> Undefined variable: user_role
+in APPPATH\Views\templates\header.php on line 41.
+ 1 APPPATH\Views\templates\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_role', 'APPPATH\\Views\\templates\\header.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\user.php(44): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 08:19:10 --> Undefined variable: user_role
+in APPPATH\Views\templates\header.php on line 41.
+ 1 APPPATH\Views\templates\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_role', 'APPPATH\\Views\\templates\\header.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\user.php(44): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 08:21:36 --> Undefined variable: user_role
+in APPPATH\Views\templates\header.php on line 41.
+ 1 APPPATH\Views\templates\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_role', 'APPPATH\\Views\\templates\\header.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\user.php(44): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:21:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:21:53 --> Undefined variable: user_role
+in APPPATH\Views\templates\header.php on line 41.
+ 1 APPPATH\Views\templates\header.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: user_role', 'APPPATH\\Views\\templates\\header.php', 41, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\templates\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('templates/header', [], true)
+ 5 APPPATH\Controllers\user.php(44): view('templates/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:26:01 --> Call to undefined function form_open()
+in APPPATH\Views\user\register.php on line 10.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('user/register', [], true)
+ 4 APPPATH\Controllers\user.php(88): view('user/register')
+ 5 APPPATH\Controllers\user.php(48): App\Controllers\User->register()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 08:26:12 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\Reports.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Reports.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Reports')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Reports')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\Reports')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Reports', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:26:17 --> Call to undefined function form_open()
+in APPPATH\Views\user\register.php on line 10.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('user/register', [], true)
+ 4 APPPATH\Controllers\user.php(88): view('user/register')
+ 5 APPPATH\Controllers\user.php(48): App\Controllers\User->register()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:26:43 --> Call to undefined method CodeIgniter\Session\Session::userdata()
+in APPPATH\Controllers\Executive.php on line 42.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Executive->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Executive))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:27:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:27:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:28:33 --> Class 'CI_Model' not found
+in APPPATH\Models\Executive_model.php on line 10.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\Executive_model.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Executive_model')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Executive_model')
+ 5 [internal function]: spl_autoload_call('App\\Models\\Executive_model')
+ 6 SYSTEMPATH\Config\Factories.php(155): class_exists('App\\Models\\Executive_model')
+ 7 SYSTEMPATH\Config\Factories.php(125): CodeIgniter\Config\Factories::locateClass([...], 'Executive_model')
+ 8 SYSTEMPATH\Config\Factories.php(86): CodeIgniter\Config\Factories::__callStatic('models', [...])
+ 9 SYSTEMPATH\Common.php(818): CodeIgniter\Config\Factories::models('Executive_model', [...], null)
+10 APPPATH\Controllers\Executive.php(53): model('Executive_model')
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Executive->index()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Executive))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:29:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:29:49 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Models\Executive_model.php on line 120.
+ 1 APPPATH\Controllers\Executive.php(53): App\Models\Executive_model->getempdata()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Executive->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Executive))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:31:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-08-16 08:31:38 --> mysqli_sql_exception: Table 'db_sec_app.tbl_ct_map_emp_phone' doesn't exist in C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\wamp64\www\manage-app\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\wamp64\www\manage-app\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\wamp64\www\manage-app\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\wamp64\www\manage-app\app\Models\Executive_model.php(124): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\manage-app\app\Controllers\Executive.php(53): App\Models\Executive_model->getempdata()
+#6 C:\wamp64\www\manage-app\system\CodeIgniter.php(934): App\Controllers\Executive->index()
+#7 C:\wamp64\www\manage-app\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Executive))
+#8 C:\wamp64\www\manage-app\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\manage-app\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-08-16 08:31:38 --> Table 'db_sec_app.tbl_ct_map_emp_phone' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `employee`
+JOIN `tbl_ct_map_emp_phone` ON `tbl_emp`.`id` = `tbl_ct_map_emp_phone`.`empid`
+JOIN `tbl_ct_phone` ON `tbl_ct_map_emp_phone`.`phone_id` = `tbl_ct_phone`.`id`
+WHERE `emp_type` = :emp_type:', [...], false)
+ 2 APPPATH\Models\Executive_model.php(124): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Executive.php(53): App\Models\Executive_model->getempdata()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Executive->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Executive))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:33:47 --> Undefined index: empid
+in APPPATH\Views\list\Executive.php on line 10.
+ 1 APPPATH\Views\list\Executive.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: empid', 'APPPATH\\Views\\list\\Executive.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\list\\Executive.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/Executive', [], true)
+ 5 APPPATH\Controllers\Executive.php(55): view('list/Executive')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Executive->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Executive))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 08:34:04 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\Reports.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Reports.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Reports')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Reports')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\Reports')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Reports', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 08:37:16 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\Reports.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Reports.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Reports')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Reports')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\Reports')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Reports', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:38:01 --> Undefined variable: get_emp_adv
+in APPPATH\Views\list\reports.php on line 62.
+ 1 APPPATH\Views\list\reports.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: get_emp_adv', 'APPPATH\\Views\\list\\reports.php', 62, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\list\\reports.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/reports', [], true)
+ 5 APPPATH\Controllers\Reports.php(45): view('list/reports', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 08:38:09 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\Settings.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Settings.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\settings')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\settings')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\settings')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\settings', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-08-16 08:42:29 --> Undefined property: App\Controllers\Settings::$input
+in APPPATH\Controllers\Settings.php on line 80.
+ 1 APPPATH\Controllers\Settings.php(80): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Settings::$input', 'APPPATH\\Controllers\\Settings.php', 80, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->usersetting()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:48:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:48:26 --> The route for "/login" cannot be found.
+in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
+ 1 SYSTEMPATH\HTTP\RedirectResponse.php(60): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('/login')
+ 2 SYSTEMPATH\Common.php(869): CodeIgniter\HTTP\RedirectResponse->route(false)
+ 3 APPPATH\Controllers\Settings.php(47): redirect('/login')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Settings->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Settings))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:50:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:51:37 --> Class 'CI_Controller' not found
+in APPPATH\Controllers\Utilities.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Utilities.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Utilities')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Utilities')
+ 5 [internal function]: spl_autoload_call('App\\Controllers\\Utilities')
+ 6 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Utilities', true)
+ 7 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:55:53 --> Undefined variable: get_emp_adv
+in APPPATH\Views\list\utilities.php on line 62.
+ 1 APPPATH\Views\list\utilities.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: get_emp_adv', 'APPPATH\\Views\\list\\utilities.php', 62, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\list\\utilities.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/utilities', [], true)
+ 5 APPPATH\Controllers\Utilities.php(44): view('list/utilities', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Utilities->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilities))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:56:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:56:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:56:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:56:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:57:04 --> Call to undefined function date_range()
+in APPPATH\Views\list\attendance.php on line 165.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/attendance', [], true)
+ 4 APPPATH\Controllers\Attendance.php(50): view('list/attendance', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Attendance->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Attendance))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:57:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:57:14 --> Undefined index: empid
+in APPPATH\Views\list\Executive.php on line 10.
+ 1 APPPATH\Views\list\Executive.php(10): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: empid', 'APPPATH\\Views\\list\\Executive.php', 10, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\list\\Executive.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/Executive', [], true)
+ 5 APPPATH\Controllers\Executive.php(55): view('list/Executive')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Executive->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Executive))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:57:19 --> Undefined variable: get_emp_adv
+in APPPATH\Views\list\reports.php on line 62.
+ 1 APPPATH\Views\list\reports.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: get_emp_adv', 'APPPATH\\Views\\list\\reports.php', 62, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\list\\reports.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/reports', [], true)
+ 5 APPPATH\Controllers\Reports.php(45): view('list/reports', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Reports->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:57:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:57:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-08-16 08:57:28 --> Undefined variable: get_emp_adv
+in APPPATH\Views\list\utilities.php on line 62.
+ 1 APPPATH\Views\list\utilities.php(62): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: get_emp_adv', 'APPPATH\\Views\\list\\utilities.php', 62, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\list\\utilities.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('list/utilities', [], true)
+ 5 APPPATH\Controllers\Utilities.php(44): view('list/utilities', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Utilities->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Utilities))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-08-16 08:57:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:57:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 08:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 09:50:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 09:50:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 09:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 09:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 09:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 09:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 09:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 09:57:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 10:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 13:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 13:36:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 13:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-08-16 13:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

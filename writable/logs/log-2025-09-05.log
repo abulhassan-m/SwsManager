@@ -1,0 +1,864 @@
+CRITICAL - 2025-09-05 19:05:53 --> Error: Class "App\Models\CityModel" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:07:33 --> Error: Class "App\Models\CityModel" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\Home.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+ERROR - 2025-09-05 19:40:31 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `compani...', Array, false)
+#4 C:\wamp64\www\QcareN-demo\app\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\QcareN-demo\app\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters(Array)
+#6 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\QcareN-demo\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\QcareN-demo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\QcareN-demo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\wamp64\www\QcareN-demo\system\rewrite.php(44): require_once('C:\\wamp64\\www\\Q...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `compani...', Array, false)
+#3 C:\wamp64\www\QcareN-demo\app\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\QcareN-demo\app\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters(Array)
+#5 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#6 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\QcareN-demo\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\QcareN-demo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\QcareN-demo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\wamp64\www\QcareN-demo\system\rewrite.php(44): require_once('C:\\wamp64\\www\\Q...')
+#12 {main}
+CRITICAL - 2025-09-05 19:40:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 3 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+ERROR - 2025-09-05 19:42:34 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `compani...', Array, false)
+#4 C:\wamp64\www\QcareN-demo\app\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\QcareN-demo\app\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters(Array)
+#6 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\QcareN-demo\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\QcareN-demo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\QcareN-demo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\wamp64\www\QcareN-demo\system\rewrite.php(44): require_once('C:\\wamp64\\www\\Q...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `compani...', Array, false)
+#3 C:\wamp64\www\QcareN-demo\app\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\wamp64\www\QcareN-demo\app\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters(Array)
+#5 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#6 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\QcareN-demo\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\QcareN-demo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\QcareN-demo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\wamp64\www\QcareN-demo\system\rewrite.php(44): require_once('C:\\wamp64\\www\\Q...')
+#12 {main}
+CRITICAL - 2025-09-05 19:42:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 3 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+ERROR - 2025-09-05 19:43:02 --> mysqli_sql_exception: Table 'db_qcare.companies' doesn't exist in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `compani...', 0)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `compani...')
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `compani...')
+#3 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `compani...', Array, false)
+#4 C:\wamp64\www\QcareN-demo\app\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\QcareN-demo\app\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters(Array)
+#6 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\QcareN-demo\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\QcareN-demo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\QcareN-demo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\wamp64\www\QcareN-demo\system\rewrite.php(44): require_once('C:\\wamp64\\www\\Q...')
+#13 {main}
+CRITICAL - 2025-09-05 19:43:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.companies' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 2 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:43:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.companies' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 4 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:43:02 --> [Caused by] mysqli_sql_exception: Table 'db_qcare.companies' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 5 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+ERROR - 2025-09-05 19:46:15 --> mysqli_sql_exception: Table 'db_qcare.companies' doesn't exist in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `compani...', 0)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `compani...')
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `compani...')
+#3 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `compani...', Array, false)
+#4 C:\wamp64\www\QcareN-demo\app\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\QcareN-demo\app\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters(Array)
+#6 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\QcareN-demo\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\QcareN-demo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\QcareN-demo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\wamp64\www\QcareN-demo\system\rewrite.php(44): require_once('C:\\wamp64\\www\\Q...')
+#13 {main}
+CRITICAL - 2025-09-05 19:46:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.companies' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 2 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:46:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.companies' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 4 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:46:15 --> [Caused by] mysqli_sql_exception: Table 'db_qcare.companies' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 5 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+ERROR - 2025-09-05 19:46:18 --> mysqli_sql_exception: Table 'db_qcare.companies' doesn't exist in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `compani...', 0)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `compani...')
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `compani...')
+#3 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `compani...', Array, false)
+#4 C:\wamp64\www\QcareN-demo\app\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\QcareN-demo\app\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters(Array)
+#6 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\QcareN-demo\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\QcareN-demo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\QcareN-demo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\wamp64\www\QcareN-demo\system\rewrite.php(44): require_once('C:\\wamp64\\www\\Q...')
+#13 {main}
+CRITICAL - 2025-09-05 19:46:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.companies' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 2 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:46:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.companies' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 4 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:46:18 --> [Caused by] mysqli_sql_exception: Table 'db_qcare.companies' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 5 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+ERROR - 2025-09-05 19:46:19 --> mysqli_sql_exception: Table 'db_qcare.companies' doesn't exist in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `compani...', 0)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `compani...')
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `compani...')
+#3 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `compani...', Array, false)
+#4 C:\wamp64\www\QcareN-demo\app\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\QcareN-demo\app\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters(Array)
+#6 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\QcareN-demo\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\QcareN-demo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\QcareN-demo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\wamp64\www\QcareN-demo\system\rewrite.php(44): require_once('C:\\wamp64\\www\\Q...')
+#13 {main}
+CRITICAL - 2025-09-05 19:46:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.companies' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 2 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:46:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.companies' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 4 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:46:19 --> [Caused by] mysqli_sql_exception: Table 'db_qcare.companies' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 5 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+ERROR - 2025-09-05 19:46:20 --> mysqli_sql_exception: Table 'db_qcare.companies' doesn't exist in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `compani...', 0)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `compani...')
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `compani...')
+#3 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `compani...', Array, false)
+#4 C:\wamp64\www\QcareN-demo\app\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\QcareN-demo\app\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters(Array)
+#6 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\QcareN-demo\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\QcareN-demo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\QcareN-demo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\wamp64\www\QcareN-demo\system\rewrite.php(44): require_once('C:\\wamp64\\www\\Q...')
+#13 {main}
+CRITICAL - 2025-09-05 19:46:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.companies' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 2 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:46:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.companies' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 4 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:46:20 --> [Caused by] mysqli_sql_exception: Table 'db_qcare.companies' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 5 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+ERROR - 2025-09-05 19:46:26 --> mysqli_sql_exception: Table 'db_qcare.companies' doesn't exist in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `compani...', 0)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `compani...')
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `compani...')
+#3 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `compani...', Array, false)
+#4 C:\wamp64\www\QcareN-demo\app\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\QcareN-demo\app\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters(Array)
+#6 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\QcareN-demo\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\QcareN-demo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\QcareN-demo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\wamp64\www\QcareN-demo\system\rewrite.php(44): require_once('C:\\wamp64\\www\\Q...')
+#13 {main}
+CRITICAL - 2025-09-05 19:46:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.companies' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 2 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:46:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.companies' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 4 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:46:26 --> [Caused by] mysqli_sql_exception: Table 'db_qcare.companies' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`', [], false)
+ 5 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+ERROR - 2025-09-05 19:58:38 --> mysqli_sql_exception: Table 'db_qcare.company_services' doesn't exist in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `compani...', 0)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `compani...')
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `compani...')
+#3 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `compani...', Array, false)
+#4 C:\wamp64\www\QcareN-demo\app\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\QcareN-demo\app\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters(Array)
+#6 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\QcareN-demo\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\QcareN-demo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\QcareN-demo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\wamp64\www\QcareN-demo\system\rewrite.php(44): require_once('C:\\wamp64\\www\\Q...')
+#13 {main}
+CRITICAL - 2025-09-05 19:58:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.company_services' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = :companies.city_id:
+AND `company_services`.`service_id` = :company_services.service_id:', [...], false)
+ 2 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:58:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.company_services' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = \'1\'
+AND `company_services`.`service_id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = \'1\'
+AND `company_services`.`service_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = :companies.city_id:
+AND `company_services`.`service_id` = :company_services.service_id:', [...], false)
+ 4 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:58:38 --> [Caused by] mysqli_sql_exception: Table 'db_qcare.company_services' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = \'1\'
+AND `company_services`.`service_id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = \'1\'
+AND `company_services`.`service_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = \'1\'
+AND `company_services`.`service_id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = :companies.city_id:
+AND `company_services`.`service_id` = :company_services.service_id:', [...], false)
+ 5 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+ERROR - 2025-09-05 19:58:51 --> mysqli_sql_exception: Table 'db_qcare.company_services' doesn't exist in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `compani...', 0)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `compani...')
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `compani...')
+#3 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `compani...', Array, false)
+#4 C:\wamp64\www\QcareN-demo\app\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\QcareN-demo\app\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters(Array)
+#6 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\QcareN-demo\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\QcareN-demo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\QcareN-demo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\wamp64\www\QcareN-demo\system\rewrite.php(44): require_once('C:\\wamp64\\www\\Q...')
+#13 {main}
+CRITICAL - 2025-09-05 19:58:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.company_services' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = :companies.city_id:
+AND `company_services`.`service_id` = :company_services.service_id:', [...], false)
+ 2 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:58:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.company_services' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = \'1\'
+AND `company_services`.`service_id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = \'1\'
+AND `company_services`.`service_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = :companies.city_id:
+AND `company_services`.`service_id` = :company_services.service_id:', [...], false)
+ 4 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:58:51 --> [Caused by] mysqli_sql_exception: Table 'db_qcare.company_services' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = \'1\'
+AND `company_services`.`service_id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = \'1\'
+AND `company_services`.`service_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = \'1\'
+AND `company_services`.`service_id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `companies`.`city_id` = :companies.city_id:
+AND `company_services`.`service_id` = :company_services.service_id:', [...], false)
+ 5 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+ERROR - 2025-09-05 19:58:58 --> mysqli_sql_exception: Table 'db_qcare.company_services' doesn't exist in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `compani...', 0)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `compani...')
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `compani...')
+#3 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `compani...', Array, false)
+#4 C:\wamp64\www\QcareN-demo\app\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\QcareN-demo\app\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters(Array)
+#6 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\wamp64\www\QcareN-demo\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\QcareN-demo\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\QcareN-demo\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\QcareN-demo\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\wamp64\www\QcareN-demo\system\rewrite.php(44): require_once('C:\\wamp64\\www\\Q...')
+#13 {main}
+CRITICAL - 2025-09-05 19:58:58 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.company_services' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `company_services`.`service_id` = :company_services.service_id:', [...], false)
+ 2 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:58:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_qcare.company_services' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `company_services`.`service_id` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `company_services`.`service_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `company_services`.`service_id` = :company_services.service_id:', [...], false)
+ 4 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+CRITICAL - 2025-09-05 19:58:58 --> [Caused by] mysqli_sql_exception: Table 'db_qcare.company_services' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `company_services`.`service_id` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `company_services`.`service_id` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `company_services`.`service_id` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `companies`.*, `cities`.`city_name`
+FROM `companies`
+LEFT JOIN `cities` ON `cities`.`city_id` = `companies`.`city_id`
+JOIN `company_services` ON `company_services`.`company_id` = `companies`.`company_id`
+WHERE `company_services`.`service_id` = :company_services.service_id:', [...], false)
+ 5 APPPATH\Models\CompanyModel.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(22): App\Models\CompanyModel->getCompaniesWithFilters([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\QcareN-demo\\public\\index.php')
+ERROR - 2025-09-05 20:01:31 --> mysqli_sql_exception: Table 'db_qcare.company_services' doesn't exist in C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\wamp64\www\QcareN-demo\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\wamp64\www\QcareN-demo\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(1841): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', NULL, false)
+#4 C:\wamp64\www\QcareN-demo\system\Database\BaseBuilder.php(2230): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\wamp64\www\QcareN-demo\app\Database\Seeds\CompanyServicesSeeder.php(15): CodeIgniter\Database\BaseBuilder->insertBatch(Array)
+#6 C:\wamp64\www\QcareN-demo\system\Database\Seeder.php(149): App\Database\Seeds\CompanyServicesSeeder->run()
+#7 C:\wamp64\www\QcareN-demo\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#8 C:\wamp64\www\QcareN-demo\system\CLI\Commands.php(74): CodeIgniter\Commands\Database\Seed->run(Array)
+#9 C:\wamp64\www\QcareN-demo\system\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#10 C:\wamp64\www\QcareN-demo\system\Boot.php(388): CodeIgniter\CLI\Console->run()
+#11 C:\wamp64\www\QcareN-demo\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\wamp64\www\QcareN-demo\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}

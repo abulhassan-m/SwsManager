@@ -1,0 +1,158 @@
+/* Elegant Hospitality Theme - Pink & Light Blue */
+
+body {
+    background: linear-gradient(120deg, #f8e1f4 0%, #e3f6fd 100%);
+    font-family: 'Nunito', 'Segoe UI', Arial, sans-serif;
+    color: #2d2d2d;
+}
+
+.header, .navbar {
+    background: linear-gradient(90deg, #ffb6c1 0%, #87cefa 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #050505 !important;
+    text-shadow: 1px 1px 4px #ff69b4;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px #87cefa;
+}
+    /* High Contrast Hospitality Theme - Pink, Blue, Black, White */
+    body {
+       /* background: linear-gradient(120deg, #232946 0%, #eeb1b3 100%); */
+        font-family: 'Nunito', 'Segoe UI', Arial, sans-serif;
+        color: #232946;
+    }
+
+    .header, .navbar {
+        background: linear-gradient(90deg, #232946 0%, #eeb1b3 100%);
+        color: #fff;
+        box-shadow: 0 2px 8px rgba(44,62,80,0.18);
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #fff !important;
+        text-shadow: 2px 2px 6px #232946;
+    }
+
+    .navbar-nav .nav-link {
+        color: #fff !important;
+        font-weight: 600;
+        text-shadow: 1px 1px 2px #eeb1b3;
+        transition: color 0.2s;
+    }
+    .navbar-nav .nav-link:hover {
+        color: #eeb1b3 !important;
+        background: #232946;
+        border-radius: 6px;
+    }
+
+    .footer {
+        background: #232946;
+        color: #eeb1b3;
+        padding: 24px 0;
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .card {
+        border: none;
+        border-radius: 16px;
+        box-shadow: 0 2px 12px rgba(44,62,80,0.18);
+        background: #fff;
+        transition: box-shadow 0.2s;
+    }
+    .card:hover {
+        box-shadow: 0 4px 24px #eeb1b3;
+    }
+
+    .card-title {
+        color: #232946;
+        font-size: 1.35rem;
+        font-weight: 800;
+        letter-spacing: 0.5px;
+        text-shadow: 1px 1px 4px #eeb1b3;
+    }
+
+    .card-text {
+        color: #232946;
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    .card-text strong {
+        color: #eeb1b3;
+    }
+
+    .btn-primary, .btn-info {
+        background: linear-gradient(90deg, #232946 0%, #eeb1b3 100%);
+        border: none;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 1px;
+        box-shadow: 0 2px 8px rgba(44,62,80,0.18);
+        text-shadow: 1px 1px 2px #232946;
+    }
+    .btn-primary:hover, .btn-info:hover {
+        background: linear-gradient(90deg, #eeb1b3 0%, #232946 100%);
+        color: #232946;
+    }
+    .btn-contrast {
+        background: #eeb1b3 !important;
+        color: #232946 !important;
+        font-weight: 700;
+        border-radius: 8px;
+        padding: 6px 18px;
+        box-shadow: 0 2px 8px rgba(44,62,80,0.18);
+        transition: background 0.2s, color 0.2s;
+    }
+    .btn-contrast:hover {
+        background: #232946 !important;
+        color: #eeb1b3 !important;
+    }
+
+    .form-control:focus {
+        border-color: #232946;
+        box-shadow: 0 0 0 0.2rem rgba(35,41,70,0.25);
+    }
+
+    .section-title {
+        color: #232946;
+        font-size: 2.1rem;
+        font-weight: 900;
+        margin-bottom: 24px;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 8px #eeb1b3;
+    }
+
+    .alert-info {
+        color: #232946;
+        background: linear-gradient(90deg, #eeb1b3 0%, #232946 100%);
+        border: none;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+    .alert-warning {
+        color: #fff;
+        background: linear-gradient(90deg, #232946 0%, #eeb1b3 100%);
+        border: none;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+.logout-btn {
+    box-shadow: 0 0 8px #dc3545;
+    border: 2px solid #dc3545;
+    color: #fff;
+    background: #dc3545;
+    transition: background 0.3s, color 0.3s;
+}

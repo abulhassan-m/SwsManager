@@ -1,54 +1,172 @@
-# CodeIgniter 4 Framework
+# QcareN Demo
 
-## What is CodeIgniter?
+QcareN Demo is a comprehensive company portal web application built with PHP (CodeIgniter), designed for businesses in Qatar to manage their operations, staff, services, analytics, and customer interactions efficiently.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+---
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Full Features
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+### 1. Company Management
+- Register and manage multiple companies.
+- Edit company profiles, logos, and gallery images.
+- Assign cities to companies.
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+### 2. Staff Management
+- Add, edit, and remove staff members.
+- Assign staff to companies.
+- View staff profiles and details.
 
-## Important Change with index.php
+### 3. Service Management
+- Create and manage services offered by companies.
+- Assign services to staff (staff-service mapping).
+- View all services and their associations.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+### 4. Staff-Service Mapping
+- Map services to individual staff members.
+- View and manage which staff provide which services.
+- Analytics on services mapped to staff per company.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+### 5. Gallery Management
+- Upload and manage multimedia (images, photos) for each company.
+- Display gallery on company profile.
 
-**Please** read the user guide for a better explanation of how CI4 works!
+### 6. Inquiry Management
+- Receive and manage customer inquiries.
+- View inquiry details and respond.
+- Inquiry viewer for analytics and tracking.
 
-## Repository Management
+### 7. Analytics Dashboard
+- Key Performance Indicators (KPIs): total companies, staff, services, cities, services mapped to staff.
+- Visual analytics and graphs (stub for future enhancements).
+- Activity logs for company actions.
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+### 8. SEO Meta Management
+- Manage SEO meta tags for company profiles.
+- Improve search engine visibility.
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+### 9. Activity Log
+- Track and view company activities and changes.
+- Audit trail for administrative actions.
 
-## Contributing
+### 10. Authentication & Security
+- Company user login/logout.
+- Secure session management.
+- Highlighted logout button for easy access.
 
-We welcome contributions from the community.
+### 11. Responsive UI
+- Mobile-friendly design using Bootstrap 5.
+- Sidebar navigation for quick access to modules.
+- Fixed header with branding and logout.
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+---
 
-## Server Requirements
+## Project Modules & Functionalities
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+### Company Module
+- List all companies.
+- View detailed company profiles.
+- Edit company information.
+- Assign city and logo.
+- Manage company gallery.
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+### Staff Module
+- List staff members per company.
+- Add/edit/delete staff.
+- View staff profiles.
+- Assign staff to services.
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+### Service Module
+- List all services.
+- Add/edit/delete services.
+- Assign services to staff.
+- View service mapping analytics.
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+### Staff-Service Mapping Module
+- Map services to staff.
+- View mapping table per company.
+- Analytics on service assignments.
+
+### Gallery Module
+- Upload images for company gallery.
+- View and manage gallery items.
+
+### Inquiry Module
+- Receive customer inquiries.
+- List and view inquiries.
+- Inquiry viewer for analytics.
+
+### Analytics Module
+- Dashboard with KPIs.
+- Visual representation of company data.
+- Track total companies, staff, services, cities, and service mappings.
+
+### SEO Meta Module
+- Manage SEO meta tags for company profiles.
+
+### Activity Log Module
+- View logs of company activities.
+- Track changes and actions.
+
+### Authentication Module
+- Secure login/logout for company users.
+- Session management.
+
+---
+
+## Installation
+
+1. **Clone the repository**
+   ```
+   git clone https://github.com/yourusername/QcareN-demo.git
+   ```
+
+2. **Set up your environment**
+   - Install [WAMP](https://www.wampserver.com/) or use any compatible LAMP/XAMPP stack.
+   - Place the project folder in your web server directory (e.g., `c:\wamp64\www\QcareN-demo`).
+
+3. **Configure the database**
+   - Create a MySQL database (e.g., `qcare_demo`).
+   - Import the provided SQL schema and seed data.
+   - Update `app\Config\Database.php` with your DB credentials.
+
+4. **Install dependencies**
+   - If using Composer:
+     ```
+     composer install
+     ```
+
+5. **Run migrations and seeders**
+   ```
+   php artisan migrate
+   php artisan db:seed --class=CitiesTableSeeder
+   ```
+
+6. **Access the application**
+   - Open `http://localhost/QcareN-demo` in your browser.
+
+---
+
+## Folder Structure
+
+- `app/Controllers/Company/` — Company-related controllers
+- `app/Models/` — Data models
+- `app/Views/` — Blade templates and layouts
+- `database/seeders/` — Seeder files for initial data
+- `public/assets/` — Static assets (images, CSS, JS)
+
+---
+
+## Dependencies
+
+- PHP 8+
+- CodeIgniter 4
+- Bootstrap 5
+- Bootstrap Icons
+
+---
+
+## License
+
+This project is for demo purposes. Please contact the author for production use.
+
+---
